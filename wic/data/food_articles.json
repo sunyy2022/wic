@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Crab Roe Noodles",
+    "description": "Luxurious noodles topped with rich, savory crab roe and meat, a delicacy often found in eastern China.",
+    "image": "assets/img/crab_roe_noodles.jpg", 
+    "url": "subpage/food/crab_roe_noodles.html",
+    "keywords": ["crab roe noodles", "xiefenmian", "shanghai", "noodles", "seafood", "蟹粉面"],
+    "flavor": ["Savory", "Umami", "Rich"],
+    "allergens": ["Shellfish", "Gluten"]
+  },
+  {
+    "title": "Hotpot",
+    "description": "A communal dining experience where ingredients are cooked in a simmering pot of flavorful broth at the table.",
+    "image": "assets/img/hotpot.jpg", 
+    "url": "subpage/food/hotpot.html",
+    "keywords": ["hotpot", "huoguo", "sichuan", "beijing", "communal", "spicy", "火锅"],
+    "flavor": ["Spicy", "Numbing", "Savory", "Umami", "Customizable"],
+    "allergens": ["Soy", "Gluten", "Nuts", "Seeds", "Chili Oil", "Lamb", "Beef", "Seafood", "Sesame"]
+  },
+  {
+    "title": "Mapo Tofu",
+    "description": "A popular Sichuan dish featuring soft tofu set in a spicy, oily sauce, often with minced meat.",
+    "image": "assets/img/mapo_tofu.jpg", 
+    "url": "subpage/food/mapo_tofu.html",
+    "keywords": ["mapo tofu", "sichuan", "tofu", "spicy", "麻婆豆腐"],
+    "flavor": ["Spicy", "Numbing", "Savory", "Oily"],
+    "allergens": ["Soy", "Pork", "Beef", "Chili Oil", "Gluten"] 
+  },
+  {
+    "title": "Peking Duck",
+    "description": "A famous Beijing dish prized for its thin, crispy skin, served with pancakes, scallions, and sweet bean sauce.",
+    "image": "assets/img/peking_duck2.jpg",
+    "url": "subpage/food/peking_duck.html",
+    "keywords": ["peking duck", "beijing kaoya", "beijing", "roast duck", "duck", "北京烤鸭"],
+    "flavor": ["Savory", "Slightly Sweet", "Crispy"],
+    "allergens": ["Gluten"] 
+  },
+  {
+    "title": "Roujiamo",
+    "description": "Often called a 'Chinese hamburger,' this street food features stewed meat stuffed inside a flatbread bun.",
+    "image": "assets/img/roujiamo.jpg",
+    "url": "subpage/food/roujiamo.html",
+    "keywords": ["roujiamo", "chinese hamburger", "xian", "street food", "肉夹馍"],
+    "flavor": ["Savory", "Rich"],
+    "allergens": ["Gluten", "Pork", "Beef", "Lamb"] 
+  },
+  {
+    "title": "Xiaolongbao",
+    "description": "Delicate soup dumplings from Shanghai, filled with pork and a savory broth, steamed in a bamboo basket.",
+    "image": "assets/img/xiaolongbao.jpeg", 
+    "url": "subpage/food/xiaolongbao.html",
+    "keywords": ["xiaolongbao", "soup dumplings", "shanghai", "dumplings", "steamed", "小笼包"],
+    "flavor": ["Savory", "Umami", "Delicate", "Slightly Sweet"],
+    "allergens": ["Gluten", "Pork", "Shellfish"] 
+  }
+]

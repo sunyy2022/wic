@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Updated meta description and title for Beijing -->
+        <meta name="description" content="Explore Beijing, China's capital, blending ancient history with modern marvels. Discover the Great Wall, Forbidden City, local cuisine, and travel tips." />
+        <meta name="author" content="Wander in China" />
+        <title>Beijing Travel Guide - Wander in China Destination</title>
+        <!-- Favicon (Correct relative path from subpage/destination/ to root) -->
+        <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="32x32" />
+        <!-- Bootstrap icons (CDN link, no change needed) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (Correct relative path) -->
+        <link href="../../css/styles.css" rel="stylesheet" />
+        <style>
+            /* Optional: Style for content images */
+            .content-image {
+                max-width: 100%; /* 保留最大宽度限制 */
+                height: auto;
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+                display: block; /* 设置为块级元素 */
+                margin-left: auto; /* 自动左边距 */
+                margin-right: auto; /* 自动右边距 */
+                width: 50%; /* 设置宽度为 50% */
+            }
+            .gallery-img {
+                width: 100%; /* 相对于父容器（列）的宽度 */
+                height: 200px; /* 或您之前设置的高度 */
+                object-fit: cover;
+                object-position: center; /* 确保图片内容在框内居中 */
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+            }
+            /* Style for the header image */
+            .header-image {
+                width: 100%; /* Make image span the container width */
+                height: auto; /* Maintain aspect ratio */
+                margin-bottom: 2rem; /* Add space below the image */
+                border-radius: 0.3rem; /* Optional: rounded corners */
+            }
+            /* Specific style for the Beijing header image */
+            #beijing-header-img {
+                height: 200px; /* 设置特定高度 */
+                object-fit: cover; /* 覆盖区域，保持比例，可能裁剪 */
+                object-position: center; /* 居中显示图片内容 */
+            }
+
+            /* Floating Navigation Menu Styles */
+            #floating-nav {
+                position: fixed; /* 固定定位 */
+                left: 20px; /* 距离左边 20px */
+                top: 150px; /* 距离顶部 150px (可调整) */
+                width: 180px; /* 菜单宽度调整为 180px */
+                background-color: rgba(255, 255, 255, 0.85); /* 半透明背景 */
+                padding: 15px; /* 增加内边距 */
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                z-index: 1000; /* 确保在其他内容之上 */
+            }
+            #floating-nav ul {
+                list-style: none; /* 移除列表点 */
+                padding: 0;
+                margin: 0;
+            }
+            #floating-nav ul li {
+                margin-bottom: 8px; /* 列表项间距 */
+            }
+            #floating-nav ul li a {
+                text-decoration: none; /* 移除下划线 */
+                color: #333; /* 链接颜色 */
+                display: block; /* 让链接充满整个列表项 */
+                padding: 5px;
+                border-radius: 3px;
+                transition: background-color 0.2s ease; /* 平滑过渡 */
+                font-size: 0.9rem; /* 菜单字号调小 */
+            }
+            #floating-nav ul li a:hover {
+                background-color: #eee; /* 悬停背景色 */
+                color: #000;
+            }
+
+            /* Task List Styles */
+            .task-list {
+                list-style: none; /* 移除默认的项目符号 */
+                padding-left: 0; /* 移除默认的左侧内边距 */
+            }
+            .task-list li {
+                position: relative; /* 为伪元素定位设置相对基准 */
+                padding-left: 2em; /* 为图标留出空间 */
+                margin-bottom: 0.8rem; /* 增加列表项之间的间距 */
+                line-height: 1.6; /* 调整行高使文本更易读 */
+            }
+            .task-list li::before {
+                content: "\F26E"; 
+                font-family: 'bootstrap-icons'; /* 指定使用 Bootstrap Icons 字体 */
+                position: absolute; /* 绝对定位图标 */
+                left: 0; /* 定位到左侧 */
+                top: 0.1em; /* 微调垂直位置 */
+                font-size: 1.2em; /* 图标大小 */
+                color: #28a745; /* 设置图标颜色 (例如 Bootstrap 的 success 绿色) */
+                /* 如果使用空方框，可以换成 #6c757d (secondary 灰色) */
+            }
+
+            /* Optional: Add smooth scrolling */
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- 页头占位符 -->
+            <div id="header-placeholder"></div>
+
+            <!-- Floating Navigation Menu -->
+            <nav id="floating-nav">
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#getting-there">Getting There</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#food">Delicious Food</a></li>
+                    <li><a href="#stay">Where to Stay</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#must-do-list">Must-Do List</a></li>
+                    <li><a href="#classic-itineraries">Classic Itineraries</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Section -->
+            <section class="py-5">
+                <div class="container px-lg-5 px-md-4 px-3 my-5">
+                    <!-- Adjust the row structure for three columns -->
+                    <div class="row gx-5">
+                        <!-- Left Sidebar Column (Empty) -->
+                        <div class="col-lg-2 d-none d-lg-block">
+                            <!-- This column is intentionally left empty -->
+                            <!-- 'd-none d-lg-block' hides it on smaller screens -->
+                        </div>
+
+                        
+                        <!-- Main content column -->
+                        <!-- Adjust width from col-lg-8 to col-lg-7 -->
+                        <div class="col-lg-7">
+                            <!-- Post content-->
+                            <article>
+                                <!-- Header Image -->
+                                <img src="../../assets/img/beijing/summer_palace.png" alt="Temple of Heaven, Beijing" class="header-image" id="beijing-header-img"> <!-- 添加 ID -->
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <!-- Post title-->
+                                    <h1 class="fw-bolder mb-1" id="top">Beijing: Where Ancient History Meets Modern Marvels</h1>
+                                    <!-- Post meta content-->
+                                    <div class="text-muted fst-italic mb-2">Discover the heart of China</div>
+                                </header>
+                                <!-- Post content-->
+                                <section class="mb-5">
+                                    <p class="fs-5 mb-4">Beijing, the capital of China, is a city that effortlessly blends the grandeur of ancient dynasties with the dynamism of modern life. It's home to world-famous historical sites like the Great Wall and the Forbidden City, testaments to China's rich imperial past. Here, you'll find traditional courtyard homes in hutongs nestled alongside towering skyscrapers and bustling commercial districts. As a cultural heart of China, Beijing offers a wealth of cultural experiences, from the captivating artistry of Peking Opera to the lively performances of crosstalk. And when it comes to food, Beijing tantalizes with unique delicacies like Peking Roast Duck, Poached Tripe, and Zhajiangmian, and its snack streets are a paradise for food lovers. A stroll through Beijing offers a unique opportunity to witness the city's historical heritage and its vibrant contemporary spirit, a combination that draws visitors from around the globe.</p>
+
+                                    <!-- Image Gallery Placeholder -->
+                                    <h2 class="fw-bolder mb-4 mt-5">Beijing Highlights</h2>
+                                    <div class="row gx-4">
+                                        <div class="col-md-4">
+                                            <!-- Replace placeholder with actual image path -->
+                                            <img src="../../assets/img/beijing/great_wall2.png" alt="Beijing Scenery 1" class="gallery-img">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <!-- Replace placeholder with actual image path -->
+                                            <img src="../../assets/img/beijing/summer_palace2.png" alt="Beijing Scenery 2" class="gallery-img">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <!-- Replace placeholder with actual image path -->
+                                            <img src="../../assets/img/beijing/forbidden_city3.jpg" alt="Beijing Scenery 3" class="gallery-img">
+                                        </div>
+                                        <!-- Add more columns for more images if needed -->
+                                    </div>
+                                    <!-- End Image Gallery -->
+
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="getting-there">Getting There and Away</h2>
+                                    <h3 class="fw-bolder mb-3">By Air</h3>
+                                    <p class="fs-5 mb-4">Beijing is served by two major international airports: Beijing Capital International Airport and Beijing Daxing International Airport. You can find direct flights to Beijing from many cities worldwide. To travel between the city center and the airports, you have several convenient options: airport shuttle buses, taxis, or the subway.</p>
+                                    <h3 class="fw-bolder mb-3">By Train</h3>
+                                    <p class="fs-5 mb-4">China's extensive railway network connects Beijing to other cities across the country, with both high-speed and regular trains. High-speed trains are a popular choice for long-distance travel, offering speed and comfort. Ticket prices for high-speed trains vary depending on your destination and the class of seat you choose. For example, a second-class seat from Beijing to Shanghai costs approximately 550 yuan, while a second-class seat from Beijing to Xi'an costs around 515 yuan. You can purchase tickets online through the official 12306 website (<a href="http://www.12306.cn/en" target="_blank">http://www.12306.cn/en</a>) or at ticket windows in train stations. Keep in mind that high-speed train tickets go on sale two weeks before the departure date. It's advisable to book your tickets in advance, especially during peak travel seasons like holidays.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5">Getting Around Beijing</h2>
+                                    <h3 class="fw-bolder mb-3">Subway/Bus</h3>
+                                    <p class="fs-5 mb-4">Beijing boasts a comprehensive subway network, making it easy to navigate the city. For convenient travel on both the subway and buses, consider using the Alipay transportation code. The bus system is also a convenient option, and you can use map apps like Baidu Maps or Gaode Maps (both offer English-language interfaces) to plan your routes.</p>
+                                    <h3 class="fw-bolder mb-3">Taxi/Ride-hailing</h3>
+                                    <p class="fs-5 mb-4">You can hail taxis on the street, or use ride-hailing apps (such as Didi or Gaode Maps, the Chinese equivalent of Uber) to book a ride. Ride-hailing apps are generally recommended to avoid misunderstandings about your destination and to help ensure the driver takes the most direct route. However, be aware that traffic congestion can be heavy during morning and evening rush hours.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="attractions">Must-See Attractions & Cultural Experiences</h2>
+                                    <h3 class="fw-bolder mb-3">The Forbidden City (The Palace Museum)</h3>
+                                    <p class="fs-5 mb-4">The Forbidden City, also known as the Palace Museum, is the largest and most complete ancient palace complex in the world. It offers a glimpse into the opulence and grandeur of China's imperial past. Located at the heart of Beijing's central axis, it served as the imperial palace for the Ming and Qing dynasties. Its construction began in 1406 and was completed in 1420.</p>
+                                    <!-- Replace Forbidden City Image placeholder -->
+                                    <img src="../../assets/img/beijing/forbidden_city2.jpg" alt="The Forbidden City" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">The Great Wall</h3>
+                                    <p class="fs-5 mb-4">The Great Wall is a world-renowned wonder and a symbol of China's strength and resilience. Its history dates back to the Warring States Period, when the State of Yan first built fortifications to defend against invaders. During the Qin Dynasty, these walls were connected and expanded, including the sections now within the Beijing municipality. Today, the most visited sections are primarily remnants from the Ming Dynasty, such as the Badaling and Mutianyu sections.</p>
+                                     <!-- Replace Great Wall Image placeholder -->
+                                    <img src="../../assets/img/beijing/great_wall.png" alt="The Great Wall" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">The Summer Palace</h3>
+                                    <p class="fs-5 mb-4">The Summer Palace, originally built in 1750 during the Qianlong reign of the Qing Dynasty and initially named "Qingyi Garden," is a sprawling imperial garden. Situated at No. 19, Xinjian Gongmen Road, Haidian District, Beijing, it covers an area of 3.009 square kilometers. Longevity Hill and Kunming Lake are its central features, creating a harmonious blend of natural beauty and imperial architecture. The Summer Palace is recognized as one of China's Four Great Gardens, alongside the Mountain Resort in Chengde, the Humble Administrator’s Garden, and the Lingering Garden. In 1998, it was designated a UNESCO World Heritage Site.</p>
+                                     <!-- Replace Summer Palace Image placeholder -->
+                                    <img src="../../assets/img/beijing/summer_palace.png" alt="The Summer Palace" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Hutong Tour</h3>
+                                    <p class="fs-5 mb-4">Hutongs, the traditional alleyways of Beijing, are the city's historical veins, preserving its rich history and culture. These narrow lanes, lined with siheyuan (traditional courtyard houses), began to take shape during the Yuan Dynasty. The architectural details of the hutongs, such as the door piers and screen walls, showcase the charm of traditional Chinese culture.</p>
+                                     <!-- Replace Hutong Image placeholder -->
+                                    <img src="../../assets/img/beijing/hutong.jpeg" alt="Beijing Hutong" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Peking Opera</h3>
+                                    <p class="fs-5 mb-4">Peking Opera is a cherished traditional art form that embodies the essence of Chinese theatrical performance. It combines singing, recitation, acting, and martial arts, characterized by elaborate costumes, distinctive facial makeup, and captivating performances. With a vast repertoire of historical dramas, mythological legends, and more, Peking Opera offers a fascinating glimpse into Chinese storytelling and artistry. You can experience Peking Opera at dedicated theaters like the Mei Lanfang Grand Theatre or in a more relaxed setting at some of Beijing's traditional teahouses.</p>
+                                     <!-- Replace Peking Opera Image placeholder -->
+                                    <img src="../../assets/img/beijing/beijing_opera.png" alt="Peking Opera" class="content-image mb-4">
+
+                                    
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="food">Beijing's Delicious Food</h2>
+                                    <h3 class="fw-bolder mb-3">Peking Duck</h3>
+                                    <p class="fs-5 mb-4">Peking Duck is arguably the most famous culinary specialty of Beijing. This dish is celebrated for its crispy skin and tender meat. Popular restaurants where you can savor authentic Peking Duck include Quanjude and Dadong. It is traditionally served with thin pancakes, scallions, cucumbers, and sweet bean sauce. If you prefer to skip the scallions, you can certainly do so.</p>
+                                    <!-- Replace Peking Duck Image placeholder -->
+                                    <img src="../../assets/img/beijing/peking_duck2.jpg" alt="Peking Duck" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Zhajiangmian (Noodles with Soybean Paste)</h3>
+                                    <p class="fs-5 mb-4">Zhajiangmian is a classic noodle dish from old Beijing, featuring a rich meat sauce. Be aware that the noodle portions can be quite generous, so consider your appetite when ordering. (Note for those with gluten allergies)</p>
+
+                                    <h3 class="fw-bolder mb-3">Shuanyangrou (Instant-Boiled Mutton Hot Pot)</h3>
+                                    <p class="fs-5 mb-4">Shuanyangrou, or mutton hot pot, is a popular and warming dish, especially during winter. However, some of the seasonings can be quite spicy. If you are sensitive to spicy food, be sure to let your server know when ordering. Also, travelers with specific religious beliefs or dietary restrictions should be mindful that this dish features mutton.</p>
+
+                                    <h3 class="fw-bolder mb-3">Jiaoquan (Fried Dough Rings)</h3>
+                                    <p class="fs-5 mb-4">Jiaoquan are deep-fried dough rings with a distinctive deep yellow color and bangle-like shape. They are known for their crispy and fragrant texture and unique flavor, making them a beloved traditional food in Beijing. Jiaoquan are often enjoyed with Douzhi or sandwiched in a sesame seed cake.</p>
+
+                                    <h3 class="fw-bolder mb-3">Douzhi (Mung Bean Milk)</h3>
+                                    <p class="fs-5 mb-4">Douzhi is a unique Beijing snack with a greenish-gray color and a pungent, sour smell that can be off-putting to first-time tasters. However, those who acquire a taste for it appreciate its lingering sour and fragrant flavor. It is traditionally served with finely shredded spicy pickled mustard tuber and Jiaoquan.</p>
+
+                                    <h3 class="fw-bolder mb-3">Lvdaogun (Rolling Donkey/Fried Chop Rice Cake)</h3>
+                                    <p class="fs-5 mb-4">Lvdagun, also known as Rolling Donkey or Fried Chop Rice Cake, gets its name from the way it's prepared, which is said to resemble a donkey rolling in yellow dust. The main ingredients are yellow rice flour, soybean flour, and red bean paste. The finished product is coated in soybean flour, giving it a golden-yellow appearance. Lvdaogun offers a delightful combination of fragrant bean flavor, sweet filling, and a soft, sticky, glutinous texture. It is a traditional snack enjoyed by people of all ages. (Note for those with bean and grain allergies)</p>
+                                    <img src="../../assets/img/beijing/lvdagun.png" alt="Lvdagun" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Tanghulu (Candied Fruit on a Stick)</h3>
+                                    <p class="fs-5 mb-4">Tanghulu is a traditional Chinese snack consisting of fruits like hawthorns and strawberries skewered on bamboo sticks and coated in a hardened sugar syrup. The sugar coating is crystal clear, and the snack offers a delicious sweet and sour taste. Tanghulu is a common winter treat in Beijing.</p>
+                                    <!-- Replace Tanghulu Image placeholder -->
+                                    <img src="../../assets/img/beijing/tanghulu.png" alt="Tanghulu" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Chaogan (Fried Liver)</h3>
+                                    <p class="fs-5 mb-4">Chaogan is a flavorful Beijing dish featuring shiny, dark red soup, tender liver, and fatty intestines. It is rich in flavor without being greasy, and the soup has a thick but smooth consistency. The main ingredients are pig liver and pig large intestine. It is typically eaten with steamed buns, and there's a unique way to enjoy it: by slurping it from the edge of the bowl.</p>
+
+                                    <h3 class="fw-bolder mb-3">Baodu (Quick-Boiled Tripe)</h3>
+                                    <p class="fs-5 mb-4">Baodu is a dish featuring quick-boiled beef or mutton tripe. The tripe is prepared in shreds or leaves, resulting in a crispy and tender texture that melts in your mouth. It is served with a fragrant sesame paste seasoning, creating a rich and mellow flavor. When enjoying Baodu, Beijingers pay close attention to the cooking time to achieve the perfect crispness and tenderness of the tripe.</p>
+
+                                    <h3 class="fw-bolder mb-3">Wandouhuang (Pea Flour Cake)</h3>
+                                    <p class="fs-5 mb-4">Wandouhuang is a traditional Beijing snack with a light yellow color and a delicate, smooth appearance. Its defining characteristic is its sweet taste and melt-in-your-mouth texture, providing a cool and refreshing sensation with a rich pea fragrance. Wandouhuang is a popular choice for a refreshing treat in summer.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="stay">Where to Stay in Beijing</h2>
+                                    <h3 class="fw-bolder mb-3">Wangfujing Area</h3>
+                                    <p class="fs-5 mb-4">Staying in the Wangfujing area puts you in the heart of the city, with convenient access to transportation, shopping, and attractions like the Palace Museum. Hotel prices tend to be higher here, but you'll find a range of options from luxury hotels like the Waldorf Astoria Beijing to budget-friendly choices like the Hanting Hotel.</p>
+                                    <h3 class="fw-bolder mb-3">Qianmen Area</h3>
+                                    <p class="fs-5 mb-4">The Qianmen area offers a strong sense of old Beijing charm, with its many hutongs and local snack streets. You can find a good selection of characteristic homestays at moderate prices, allowing you to experience traditional Beijing life. This area is also conveniently located near attractions such as Tiananmen Square.</p>
+                                    <h3 class="fw-bolder mb-3">Near Subway Stations</h3>
+                                    <p class="fs-5 mb-4">Staying near subway stations, especially those on Line 2 (the loop line), provides excellent connectivity to various parts of the city and its attractions. Chain hotels like Home Inn and 7 Days Inn offer budget-friendly accommodations with good value for your money.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="weather">Weather in Beijing</h2>
+                                    <h3 class="fw-bolder mb-3">Spring and Autumn (March – May, September – November)</h3>
+                                    <p class="fs-5 mb-4">Spring and autumn are generally considered the most pleasant times to visit Beijing, with comfortable temperatures that are ideal for sightseeing. During these seasons, you'll likely be comfortable wearing long-sleeved shirts and light jackets.</p>
+                                    <h3 class="fw-bolder mb-3">Summer (June – August)</h3>
+                                    <p class="fs-5 mb-4">Summer in Beijing is hot and rainy. Pack light, breathable clothing such as shorts and short-sleeved shirts. It's also essential to bring rain gear. If you plan to spend time in air-conditioned places like shopping malls or museums, a light jacket is a good idea.</p>
+                                    <h3 class="fw-bolder mb-3">Winter (December – February)</h3>
+                                    <p class="fs-5 mb-4">Winter in Beijing is cold and dry, so you'll need to pack accordingly. Warm clothing is essential, including thick down jackets, sweaters, thermal pants, scarves, hats, and gloves. If you're visiting outdoor locations with strong winds, such as the Great Wall, dress in extra layers to stay warm.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="must-do-list">Beijing's Must-Do List</h2>
+                                    <ul class="task-list">
+                                        <li>Explore the Forbidden City (Palace Museum): Immerse yourself in the grandeur of China's imperial past.</li>
+                                        <li>Walk along the Great Wall (Badaling or Mutianyu): Experience the awe-inspiring scale of this ancient wonder.</li>
+                                        <li>Visit the Bird's Nest and Water Cube: Marvel at the iconic venues of the 2008 Beijing Olympic Games, especially beautiful when illuminated at night.</li>
+                                        <li>Tour Peking University or Tsinghua University: Get a feel for the academic atmosphere of China's top universities (advance reservations are usually required through their official websites or WeChat accounts).</li>
+                                        <li>Savor Authentic Peking Roast Duck: Indulge in Beijing's signature dish at a renowned restaurant.</li>
+                                        <li>Relax in a Hutong Teahouse: Enjoy a cup of tea and soak up the traditional ambiance of old Beijing.</li>
+                                        <li>Attend a Peking Opera Performance: Discover the beauty and artistry of this traditional Chinese theatrical form.</li>
+                                    </ul>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="classic-itineraries">Classic Beijing Itineraries</h2>
+
+                                    <h3 class="fw-bolder mb-3">Route 1: Two-Day Imperial Highlights</h3>
+                                    <h4 class="fw-bolder mb-2">Day 1: Morning Arrival and City Center Exploration</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Upon your morning arrival in Beijing, check into your hotel near Tiananmen Square. After settling in, head straight to Tiananmen Square to visit the Monument to the People’s Heroes. If time permits, you can also explore the Great Hall of the People.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Enter the Forbidden City through the Meridian Gate and walk along the central axis, admiring the magnificent halls such as the Hall of Supreme Harmony, the Hall of Central Harmony, and the Hall of Preserving Harmony. Then, explore the palaces in the eastern and western wings. Exit from the Gate of Divine Might and go to Jingshan Park. Climb up to the Wanchun Pavilion for a panoramic view of the Forbidden City and the Beijing cityscape.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Have dinner at a local restaurant near Wangfujing Street. Afterward, take a stroll along Wangfujing Street, sampling traditional Chinese snacks such as baozi (steamed buns), jiaozi (dumplings), and tanghulu (candied fruit on a stick).</p>
+                                    <h4 class="fw-bolder mb-2">Day 2: Temple of Heaven and Departure</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Go to the Temple of Heaven. Admire its unique circular design and the beautiful surrounding gardens where emperors of the Ming and Qing dynasties performed sacrifices and prayed for good harvests.</p>
+                                    <p class="fs-5 mb-4"><strong>Afternoon:</strong> If you have some time before your departure, you can explore the nearby Nanluoguxiang hutong area. It’s filled with traditional courtyard houses, cafes, and handicraft shops. Then, head to the airport or train station for your journey home.</p>
+
+                                    <h3 class="fw-bolder mb-3 mt-4">Route 2: Three-Day Imperial Beijing Exploration</h3>
+                                    <h4 class="fw-bolder mb-2">Day 1: Morning Arrival and Forbidden City</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Arrive in Beijing and check into your hotel. Then, make your way to the Forbidden City. Enter through the Meridian Gate and start your exploration along the central axis, visiting the Hall of Supreme Harmony, Hall of Central Harmony, and Hall of Preserving Harmony.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Continue exploring the Forbidden City, including the palaces in the eastern and western wings. Exit from the Gate of Divine Might and head to Jingshan Park. Climb up to the Wanchun Pavilion to enjoy the view.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Have dinner near Wangfujing Street and then take a walk along the street to experience the local food and shopping atmosphere.</p>
+                                    <h4 class="fw-bolder mb-2">Day 2: The Great Wall and Ming Tombs</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Take a bus or hire a car to the Badaling Great Wall. Walk along the wall, enjoying the magnificent view of it winding through the mountains.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Proceed to the Ming Tombs. Visit the Changling Tomb, the largest and most well-preserved of the Ming Tombs, to see the grand sacrificial halls and underground palaces.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Return to the city and have dinner at a restaurant in the Huogongdian area, famous for its Beijing-style hot pot.</p>
+                                    <h4 class="fw-bolder mb-2">Day 3: Temple of Heaven and Hutongs before Departure</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Go to the Temple of Heaven. Appreciate its architecture and historical significance.</p>
+                                    <p class="fs-5 mb-4"><strong>Afternoon:</strong> Explore the Beijing hutongs, perhaps take a rickshaw ride in Nanluoguxiang. Have an early dinner at a local hutong restaurant. Then, head to the airport or train station for your departure.</p>
+
+                                    <h3 class="fw-bolder mb-3 mt-4">Route 3: Four-Day Comprehensive Beijing Experience</h3>
+                                    <h4 class="fw-bolder mb-2">Day 1: Morning Arrival and City Center</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Arrive in Beijing and check in. Head to Tiananmen Square. Visit the Monument to the People’s Heroes, the Great Hall of the People, and if you’re interested, the National Museum of China.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Enter the Forbidden City through the Meridian Gate. Explore the central axis and then the side palaces. Exit from the Gate of Divine Might and visit Jingshan Park.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Have dinner near Wangfujing Street and enjoy the street food and shopping.</p>
+                                    <h4 class="fw-bolder mb-2">Day 2: The Great Wall and Ming Tombs</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Travel to the Badaling Great Wall. Walk along the wall, soak in the historical atmosphere, and enjoy the views.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Proceed to the Ming Tombs. Visit the Changling Tomb and learn about the burial culture of the Ming Dynasty.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Return to the city and have a hot pot dinner in the Huogongdian area.</p>
+                                    <h4 class="fw-bolder mb-2">Day 3: Summer Palace and Temple of Heaven</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Go to the Summer Palace. Walk around the Long Corridor, visit the Marble Boat, and enjoy the beautiful lakes and palaces.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Head to the Temple of Heaven. Admire its unique architecture and the peaceful gardens.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Have dinner at a local restaurant near the Temple of Heaven and explore the nearby area.</p>
+                                    <h4 class="fw-bolder mb-2">Day 4: Hutongs and Departure</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Explore Beijing hutongs. You can take a rickshaw ride in Nanluoguxiang or visit other hutong areas. Have lunch at a local hutong restaurant.</p>
+                                    <p class="fs-5 mb-4"><strong>Afternoon:</strong> If you still have time, do some last-minute shopping or relax. Then, head to the airport or train station for your departure.</p>
+
+                                    <h3 class="fw-bolder mb-3 mt-4">Route 4: Four-Day Modern and Historical Blend</h3>
+                                    <h4 class="fw-bolder mb-2">Day 1: Morning Arrival and Tiananmen Square – Forbidden City</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Arrive in Beijing and check into your hotel. Then, go to Tiananmen Square. Visit the Monument to the People’s Heroes and the Great Hall of the People.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Enter the Forbidden City through the Meridian Gate. Explore the palaces and historical relics. Exit from the Gate of Divine Might and consider visiting Jingshan Park.</p>
+                                    <p class="fs-5 mb-4"><strong>Evening:</strong> Have dinner at Wangfujing Street and experience the bustling commercial atmosphere.</p>
+                                    <h4 class="fw-bolder mb-3 mt-4">Day 2: Beijing National Stadium (Bird’s Nest) and Water Cube</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Go to the Beijing National Stadium (Bird’s Nest) and the National Aquatics Center (Water Cube). Admire their unique architecture and learn about the 2008 Beijing Olympics. You can also visit the China Science and Technology Museum nearby.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Take a subway to the Summer Palace. Enjoy the peaceful scenery, including the Long Corridor and the Marble Boat.</p>
+                                    <p class="fs-5 mb-2"><strong>Evening:</strong> Have dinner near the Summer Palace and then return to your hotel.</p>
+
+                                    <h4 class="fw-bolder mb-3 mt-4">Day 3: The Great Wall at Mutianyu</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Take a bus or a private car to the Mutianyu Great Wall. Hike along the wall or take a cable car up and down to enjoy the beautiful and less crowded view.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> Have lunch at a local farmhouse and then return to the city.</p>
+                                    <p class="fs-5 mb-2"><strong>Evening:</strong> Enjoy a Peking duck dinner at a famous restaurant like Quanjude or Da Dong.</p>
+
+                                    <h4 class="fw-bolder mb-3 mt-4">Day 4: Temple of Heaven and Departure</h4>
+                                    <p class="fs-5 mb-2"><strong>Morning:</strong> Go to the Temple of Heaven. Appreciate its historical and architectural value.</p>
+                                    <p class="fs-5 mb-2"><strong>Afternoon:</strong> If you have some free time before your departure, you can do some shopping or simply relax. Then, head to the airport or train station.</p>
+        
+                                </section>
+                            </article>
+                        </div>
+                        <!-- Right Sidebar Column (Empty or for Ads/Related Content) -->
+                        <div class="col-lg-3">
+                            <!-- Sidebar Placeholder - This ID should match the one used in components.js -->
+                            <div id="destination-sidebar-placeholder">
+                                <!-- Content from destination_sidebar.html will be loaded here by components.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main> <!-- flex-shrink-0 -->
+
+    
+    
+
+
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS (Correct relative path) -->
+    <script src="../../js/scripts.js"></script>
+    <!-- Components loader (Correct relative path) -->
+    <script src="../../js/components.js"></script>
+</body>
+</html>

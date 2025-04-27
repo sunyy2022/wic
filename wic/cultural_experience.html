@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Discover authentic Chinese cultural experiences. Explore traditional arts, crafts, cuisine, and customs. Search and find activities to immerse yourself in China's rich heritage." />
+        <meta name="author" content="Wander in China" />
+        <title>Cultural Experiences - Wander in China</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <!-- 页头占位符 -->
+        <div id="header-placeholder"></div>
+
+        <main class="flex-shrink-0">
+            <!-- Page Header Section with Background -->
+            <section class="py-5 text-center" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/img/beijing_opera.jpg') center 40%/cover no-repeat; min-height: 250px; display: flex; align-items: center; justify-content: center;">
+                <div class="container px-5">
+                    <h1 class="fw-bolder text-white mb-3">Cultural Experiences</h1>
+                    <p class="lead fw-normal text-white mb-0">Discover the rich tapestry of Chinese culture</p> {/* Changed text-white-75 to text-white */}
+                </div>
+            </section>
+
+            <!-- Search and Cards Section -->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <!-- Search Input -->
+                    <div class="row gx-5 justify-content-center mb-5">
+                        <div class="col-lg-8 col-xl-6">
+                            <form id="search-form">
+                                <div class="input-group">
+                                    <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Search cultural experiences..." aria-label="Search cultural experiences">
+                                    <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Experience List Container -->
+                    <div class="row gx-5" id="experience-list-container">
+                        <!-- Experiences will be loaded here by JavaScript -->
+                        <div class="col-12 text-center" id="loading-indicator">
+                            <p>Loading experiences...</p>
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center d-none" id="no-results-message">
+                            <p>No matching cultural experiences found.</p>
+                        </div>
+                        <!-- Static content removed -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 页脚占位符 -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- Components loader -->
+        <script src="js/components.js"></script>
+
+        <!-- Custom JS for Experience List -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const experienceListContainer = document.getElementById('experience-list-container');
+                const searchInput = document.getElementById('search-input');
+                const searchForm = document.getElementById('search-form');
+                const loadingIndicator = document.getElementById('loading-indicator');
+                const noResultsMessage = document.getElementById('no-results-message');
+                let allExperiences = []; // To store all fetched experiences
+
+                // Function to render experience cards
+                function renderExperiences(experiences) {
+                    experienceListContainer.innerHTML = ''; // Clear previous results or loading indicator
+                    noResultsMessage.classList.add('d-none'); // Hide no results message initially
+
+                    if (experiences.length === 0) {
+                        noResultsMessage.classList.remove('d-none'); // Show no results message
+                        return;
+                    }
+
+                    experiences.forEach(experience => {
+                        const experienceElement = document.createElement('div');
+                        experienceElement.classList.add('col-lg-4', 'mb-5');
+                        // Construct the inner HTML for the card
+                        experienceElement.innerHTML = `
+                            <div class="card h-100 shadow border-0">
+                                ${experience.image ? `<img class="card-img-top" src="${experience.image}" alt="${experience.title}" style="height: 180px; object-fit: cover;" onerror="this.style.display='none'; console.error('Failed to load image: ${experience.image}')" />` : ''}
+                                <div class="card-body p-4">
+                                    <a class="text-decoration-none link-dark stretched-link" href="${experience.url}"><h4 class="card-title mb-3 fw-bold">${experience.title}</h4></a>
+                                    <p class="card-text mb-0 small text-muted">${experience.description}</p>
+                                </div>
+                                <!-- Optional: Add footer if needed, e.g., for tags or dates -->
+                                <!--
+                                <div class="card-footer p-3 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="text-muted small">
+                                            <i class="bi bi-tags me-1"></i> ${experience.tags ? experience.tags.join(', ') : 'N/A'}
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+                            </div>
+                        `;
+                        experienceListContainer.appendChild(experienceElement);
+                    });
+                }
+
+                // Function to filter experiences based on search term
+                function filterExperiences(term) {
+                    const lowerCaseTerm = term.toLowerCase().trim();
+                    if (!lowerCaseTerm) {
+                        renderExperiences(allExperiences); // Show all if search is empty
+                        return;
+                    }
+
+                    const filteredExperiences = allExperiences.filter(experience => {
+                        const titleMatch = experience.title.toLowerCase().includes(lowerCaseTerm);
+                        // Description search can be added if needed:
+                        // const descriptionMatch = experience.description.toLowerCase().includes(lowerCaseTerm);
+                        const tagsMatch = experience.tags && experience.tags.some(tag => tag.toLowerCase().includes(lowerCaseTerm));
+                        return titleMatch || tagsMatch; // Add descriptionMatch here if enabled
+                    });
+
+                    renderExperiences(filteredExperiences);
+                }
+
+                // Fetch experience data from JSON
+                fetch('data/cultural_experiences.json') // Correct path from root
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        allExperiences = data; // Store data in original order
+                        loadingIndicator.classList.add('d-none'); // Hide loading indicator
+                        renderExperiences(allExperiences); // Initial render
+                    })
+                    .catch(error => {
+                        console.error('Error fetching cultural experiences:', error);
+                        loadingIndicator.innerHTML = '<p class="text-danger">Could not load cultural experiences. Please try again later.</p>';
+                    });
+
+                // Add event listener for search input
+                searchInput.addEventListener('input', (event) => {
+                    filterExperiences(event.target.value);
+                });
+
+                // Prevent form submission from reloading the page
+                 searchForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    filterExperiences(searchInput.value);
+                });
+            });
+        </script>
+    </body>
+</html>

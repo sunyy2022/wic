@@ -1,0 +1,66 @@
+[
+  {
+    "title": "10 Essential Things to Know Before Visiting China",
+    "description": "Key tips covering visas, currency, language, transportation, and cultural etiquette for your first trip to China.",
+    "url": "subpage/blogs/essential_things.html", 
+    "image": "assets/img/essential_things.jpg",   
+    "tags": ["visa", "currency", "language", "transport", "etiquette", "tips", "planning", "essential"],
+    "creationDate": "2024-05-10"
+  },
+  {
+    "title": "Pay Like a Local: WeChat Pay & Alipay Guide",
+    "description": "Your guide to using WeChat Pay and Alipay in China like a local. Learn how to set up, link cards, and make payments seamlessly.",
+    "url": "subpage/blogs/mobile_payment.html",
+    "image": "assets/img/alipay_wechat.png",  
+    "tags": ["payment", "mobile", "wechat pay", "alipay", "cashless", "money", "finance"],
+    "creationDate": "2024-05-15"
+  },
+  {
+    "title": "Staying Connected in China: eSIMs, Wi-Fi & More",
+    "description": "Guide to staying connected in China: Learn about eSIMs, pocket Wi-Fi, local SIM cards, public Wi-Fi, and VPN usage for travelers.",
+    "url": "subpage/blogs/stay_connected.html", 
+    "image": "assets/img/phone.jpg",         
+    "tags": ["internet", "wifi", "sim card", "esim", "vpn", "connectivity", "phone", "network"],
+    "creationDate": "2024-05-20"
+  },
+  {
+    "title": "Unique Stays in China: Courtyards to Theme Hotels",
+    "description": "Explore unique accommodation options in China, from traditional Siheyuan courtyard homes to cultural theme hotels, luxury stays, budget hostels, and homestays.",
+    "url": "subpage/blogs/accommondation.html", 
+    "image": "assets/img/siheyuan.jpg", 
+    "tags": ["hotel", "accommodation", "stay", "siheyuan", "hostel", "homestay", "luxury", "lodging"],
+    "creationDate": "2024-05-25"
+  },
+  { 
+    "title": "Step-by-Step Guide to Applying for a Chinese Visa",
+    "description": "A step-by-step guide on how to apply for a Chinese tourist visa, including requirements and visa-free transit policies.",
+    "url": "subpage/blogs/apply_visa.html", 
+    "image": "assets/img/visa.jpg", 
+    "tags": ["visa", "application", "tourist", "L-type", "transit", "visa-free", "policy", "requirements", "documents"],
+    "creationDate": "2024-05-30" 
+  },
+  { 
+    "title": "Conquering the Language Barrier in China",
+    "description": "Tips and tools for overcoming the language barrier in China, including useful translation apps and basic Mandarin phrases.",
+    "url": "subpage/blogs/language_barrier.html", 
+    "image": "assets/img/greeting.jpg", 
+    "tags": ["language", "mandarin", "translation", "apps", "phrases", "communication", "barrier", "tips", "english"],
+    "creationDate": "2024-06-01" 
+  },
+  { 
+    "title": "Navigating China: A Local's Guide to Public Transportation",
+    "description": "A local's guide to navigating China's public transportation, including subways, buses, taxis, ride-hailing (Didi), and shared bikes.",
+    "url": "subpage/blogs/public_transportation.html", 
+    "image": "assets/img/subway.jpg",
+    "tags": ["transport", "public transport", "subway", "metro", "bus", "taxi", "didi", "ride-hailing", "shared bike", "navigation", "travel", "china"],
+    "creationDate": "2024-06-05" 
+  },
+  { 
+    "title": "The Ultimate Packing Checklist for Your Trip to China",
+    "description": "The ultimate packing checklist for your trip to China, covering essential documents, clothing, toiletries, electronics, and more.",
+    "url": "subpage/blogs/packing_checklist.html", 
+    "image": "assets/img/packing_checklist.jpg", 
+    "tags": ["packing", "checklist", "travel", "china", "essentials", "documents", "clothing", "toiletries", "electronics", "medication", "tips"],
+    "creationDate": "2024-06-10" 
+  }
+]

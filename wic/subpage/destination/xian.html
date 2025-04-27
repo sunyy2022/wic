@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Updated meta description and title for Xi'an -->
+        <meta name="description" content="Explore Xi'an, the ancient capital of China, home to the Terracotta Army, City Wall, and rich history. Discover attractions, food, and travel tips." />
+        <meta name="author" content="Wander in China" />
+        <title>Xi'an Travel Guide - Wander in China Destination</title>
+        <!-- Favicon (Correct relative path from subpage/destination/ to root) -->
+        <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="32x32" />
+        <!-- Bootstrap icons (CDN link, no change needed) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (Correct relative path) -->
+        <link href="../../css/styles.css" rel="stylesheet" />
+        <style>
+            /* Styles copied from previous pages */
+            .content-image {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%; /* Adjust width as needed */
+            }
+            .gallery-img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+            }
+            .header-image {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+                border-radius: 0.3rem;
+            }
+            /* Specific style for the Xi'an header image */
+            #xian-header-img {
+                height: 250px; /* Adjust height as needed */
+                object-fit: cover;
+                object-position: center; /* Adjust as needed, e.g., 'center top' */
+            }
+            #floating-nav {
+                position: fixed;
+                left: 20px;
+                top: 150px; /* Adjusted top position */
+                width: 180px;
+                background-color: rgba(255, 255, 255, 0.85);
+                padding: 15px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                z-index: 1000;
+            }
+            #floating-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            #floating-nav ul li {
+                margin-bottom: 8px;
+            }
+            #floating-nav ul li a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+                padding: 5px;
+                border-radius: 3px;
+                transition: background-color 0.2s ease;
+                font-size: 0.9rem;
+            }
+            #floating-nav ul li a:hover {
+                background-color: #eee;
+                color: #000;
+            }
+            .task-list {
+                list-style: none;
+                padding-left: 0;
+            }
+            .task-list li {
+                position: relative;
+                padding-left: 2em;
+                margin-bottom: 0.8rem;
+                line-height: 1.6;
+            }
+            .task-list li::before {
+                content: "\F26E"; /* Bootstrap Icons check-lg */
+                font-family: 'bootstrap-icons';
+                position: absolute;
+                left: 0;
+                top: 0.1em;
+                font-size: 1.2em;
+                color: #28a745; /* Success green */
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Header Placeholder -->
+            <div id="header-placeholder"></div>
+
+            <!-- Floating Navigation Menu -->
+            <nav id="floating-nav">
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#getting-there">Getting There</a></li>
+                    <li><a href="#getting-around">Getting Around</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#food">Delicious Food</a></li>
+                    <li><a href="#accommodation">Where to stay</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#must-do">Must-Do List</a></li>
+                    <li><a href="#itineraries">Classic Itineraries</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Section -->
+            <section class="py-5">
+                <div class="container px-lg-5 px-md-4 px-3 my-5">
+                    <!-- Added justify-content-center to center the column -->
+                    <div class="row gx-5 justify-content-center">
+                        <!-- Main content column -->
+                        <!-- Kept col-lg-9 for now, can change to col-lg-8 if needed -->
+                        <div class="col-lg-7">
+                            <!-- Post content-->
+                            <article>
+                                <!-- Header Image -->
+                                <img src="../../assets/img/xian/terracotta_army3.jpg" alt="Terracotta Army in Xi'an" class="header-image" id="xian-header-img">
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <!-- Post title-->
+                                    <h1 class="fw-bolder mb-1" id="top">Xi'an: Echoes of Ancient Dynasties</h1>
+                                    <!-- Post meta content-->
+                                    <div class="text-muted fst-italic mb-2">Where History Comes Alive</div>
+                                </header>
+                                <!-- Post content-->
+                                <section class="mb-5">
+                                    <p class="fs-5 mb-4">Xi'an, the capital of Shaanxi Province, stands as a monumental testament to China's ancient civilization. Once known as Chang'an (Eternal Peace), it served as the capital for thirteen dynasties, including the influential Qin, Han, and Tang dynasties. This rich history has endowed Xi'an with an unparalleled collection of historical sites and cultural relics.</p>
+                                    <p class="fs-5 mb-4">From the awe-inspiring Terracotta Army, guarding the tomb of China's first emperor, Qin Shi Huang, to the remarkably preserved ancient City Wall, Xi'an offers a journey back in time. The city was also the eastern terminus of the Silk Road, a vital trade route that connected East and West, fostering cultural exchange and economic prosperity for centuries.</p>
+                                    <p class="fs-5 mb-4">Today, Xi'an is a vibrant modern city that carefully preserves its historical legacy. Visitors can explore ancient pagodas, bustling Muslim Quarters brimming with unique street food, and world-class museums, all while experiencing the warm hospitality of the local people.</p>
+
+                                    <!-- Image Gallery -->
+                                    <h2 class="fw-bolder mb-4 mt-5">Xi'an Highlights</h2>
+                                    <div class="row gx-4">
+                                        <div class="col-md-4">
+                                            <img src="../../assets/img/xian/city_wall.jpg" alt="Xi'an City Wall" class="gallery-img">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../../assets/img/xian/landscape2.jpg" alt="Muslim Quarter Street Food" class="gallery-img">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../../assets/img/xian/big_wild_goose_pagoda.jpg" alt="Big Wild Goose Pagoda" class="gallery-img">
+                                        </div>
+                                    </div>
+                                    <!-- End Image Gallery -->
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="getting-there">Getting To Xi'an</h2>
+                                    <h3 class="fw-bolder mb-3">By Air</h3>
+                                    <p class="fs-5 mb-4">Xi'an Xianyang International Airport (XIY) serves as the city's primary aviation gateway. The airport offers a wide selection of both domestic and international flights, connecting Xi'an to destinations across the globe. Numerous airlines from different parts of the world operate here, providing convenient and accessible travel options for international tourists. The airport is well-equipped with a variety of facilities, including diverse dining areas, convenient shopping stores, and comfortable passenger lounges.</p>
+                                    <h3 class="fw-bolder mb-3">By Train</h3>
+                                    <p class="fs-5 mb-4">Xi'an boasts a well-developed railway network with multiple stations. Xi'an North Station stands as a major high-speed railway hub, connecting Xi'an to numerous cities throughout China via an extensive network of high-speed trains. Travelers can enjoy swift and comfortable journeys to major cities like Beijing, Shanghai, and Guangzhou. In addition to high-speed services, Xi'an Station also serves many regular trains, providing an even greater variety of travel options.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="getting-around">Getting Around Xi'an</h2>
+                                    <h3 class="fw-bolder mb-3">Metro</h3>
+                                    <p class="fs-5 mb-4">The Xi'an Metro is a highly efficient and convenient way to navigate the city. Its continuously expanding network covers many key areas and attractions. Visitors can utilize the Xi'an Public Transportation Card or purchase single-trip tickets at station vending machines. Mobile payment options like Alipay and WeChat Pay are widely accepted. Trains run frequently, especially during peak hours.</p>
+                                    <h3 class="fw-bolder mb-3">Bus</h3>
+                                    <p class="fs-5 mb-4">Xi'an features an extensive bus network with affordable fares (typically 1-2 yuan). Cash (exact amount recommended), the Public Transportation Card, or mobile payments are accepted. Bus routes are marked at stops, but be aware of potential traffic congestion during rush hours.</p>
+                                    <h3 class="fw-bolder mb-3">Taxi / Ride-hailing</h3>
+                                    <p class="fs-5 mb-4">Taxis are readily accessible and operate using meters. They can be hailed on the street or found at designated stands. Ride-hailing apps like Didi are also widely used, offering a convenient booking alternative.</p>
+                                    <h3 class="fw-bolder mb-3">Shared Bikes</h3>
+                                    <p class="fs-5 mb-4">Shared bikes (e.g., Mobike, Hello Bike) are popular for short distances. Use the corresponding app to unlock and pay. Remember to park them in designated areas.</p>
+                                     <h3 class="fw-bolder mb-3">Sightseeing Bus</h3>
+                                    <p class="fs-5 mb-4">Specific sightseeing buses cater to tourists, like the City Wall Sightseeing Bus. Tickets can usually be purchased on board using cash or mobile payment, offering hop-on-hop-off convenience at major sites.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="attractions">Famous Attractions</h2>
+                                    <h3 class="fw-bolder mb-3">Terracotta Army</h3>
+                                    <p class="fs-5 mb-4">A world-renowned archaeological wonder, the Terracotta Army is an awe-inspiring collection of thousands of life-sized clay warriors and horses. Each figure boasts unique facial expressions and postures, showcasing the incredible artistry and craftsmanship of ancient China. Standing among these silent guardians, visitors can truly appreciate the grandeur and formidable military might of the Qin Dynasty.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/terracotta_army2.jpg" alt="Terracotta Army" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Xi'an City Wall</h3>
+                                    <p class="fs-5 mb-4">Xi'an is home to one of the largest and best-preserved ancient city walls in China. Cycling along the top of the wall offers a unique and panoramic view of the city. The wall, complete with its impressive moat and imposing watchtowers, provides a fascinating glimpse into ancient urban defense systems and Xi'an's rich history.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/city_wall.jpg" alt="Xi'an City Wall by Day" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Big Wild Goose Pagoda</h3>
+                                    <p class="fs-5 mb-4">Built during the Tang Dynasty, the Big Wild Goose Pagoda is a masterpiece of traditional Buddhist architecture. The pagoda's elegant and soaring structure, along with the historical artifacts housed within its walls, is truly captivating. It stands as an important symbol of Xi'an's rich cultural heritage and its role in the spread of Buddhism in China.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/big_wild_goose_pagoda.jpg" alt="Big Wild Goose Pagoda" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Shaanxi History Museum</h3>
+                                    <p class="fs-5 mb-4">The Shaanxi History Museum houses a vast and impressive collection of historical treasures. From ancient bronzes and intricate jade carvings to stunning Tang Dynasty paintings, the museum vividly tells the long and fascinating story of China's history. The exhibits are thoughtfully curated and well-presented, making it a must-visit destination for history enthusiasts.</p>
+                                    <!-- Optional: Add image if available -->
+                                    <!-- <img src="../../assets/img/xian/shaanxi_history_museum.jpg" alt="Shaanxi History Museum Exhibit" class="content-image mb-4"> -->
+
+                                    <h3 class="fw-bolder mb-3">Huaqing Palace</h3>
+                                    <p class="fs-5 mb-4">Huaqing Palace is a famous imperial garden renowned for its beautiful scenery and natural hot springs. The palace complex features exquisite palaces, tranquil gardens, and the legendary love story of Emperor Xuanzong and his consort, Yang Guifei, adds to its romantic allure. Visitors can relax and rejuvenate in the hot springs and immerse themselves in the luxurious atmosphere of imperial China.</p>
+                                    <!-- Optional: Add image if available -->
+                                    <!-- <img src="../../assets/img/xian/huaqing_palace.jpg" alt="Huaqing Palace Garden" class="content-image mb-4"> -->
+
+                                    <h3 class="fw-bolder mb-3">Grand Tang Mall</h3>
+                                    <p class="fs-5 mb-4">The Grand Tang Mall is a large-scale cultural and commercial pedestrian street located in Xi'an. It vividly recreates the grandeur and prosperity of the Tang Dynasty. At night, the street comes alive with colorful lights, cultural performances, restaurants, and shops, offering an immersive experience.</p>
+                                    <!-- Optional: Add image if available -->
+                                    <!-- <img src="../../assets/img/xian/grand_tang_mall_night.jpg" alt="Grand Tang Mall at Night" class="content-image mb-4"> -->
+
+                                    <h3 class="fw-bolder mb-3">Bell Tower</h3>
+                                    <p class="fs-5 mb-4">The Bell Tower stands as an iconic building in the heart of Xi'an. Built in the Ming Dynasty, this magnificent wooden structure offers fantastic views of the surrounding bustling streets and serves as a timeless symbol of the city's history.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/bell_tower.jpg" alt="Xi'an Bell Tower" class="content-image mb-4">
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="food">A Taste of Xi'an: Famous Foods</h2>
+                                    <p class="fs-5 mb-4">Xi'an's culinary scene is a delightful exploration of bold flavors and unique dishes, reflecting the region's rich agricultural heritage and diverse cultural influences.</p>
+
+                                    <h3 class="fw-bolder mb-3">Biángbiáng Noodles</h3>
+                                    <p class="fs-5 mb-4">A regional specialty known for thick, hand-pulled, wide noodles. Typically topped with chili oil, minced meat, and vegetables, offering a simple yet flavorful and satisfying dish.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/biangbiang_noodles.jpg" alt="Biangbiang Noodles" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Roujiamo (Chinese Hamburger)</h3>
+                                    <p class="fs-5 mb-4">A popular street food featuring a crispy, baked bun filled with tender, slow-stewed pork. The contrast between the crusty bun and juicy meat makes it a delicious quick bite.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/roujiamo.jpg" alt="Roujiamo - Chinese Hamburger" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Yangrou Paomo</h3>
+                                    <p class="fs-5 mb-4">A hearty and flavorful lamb soup. Pieces of unleavened pita bread are torn and soaked in the rich broth, becoming soft and tender alongside the savory lamb. A true comfort food.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/xian/yangrou_paomo.jpg" alt="Yangrou Paomo - Lamb Soup with Bread" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Liangpi (Cold Noodles)</h3>
+                                    <p class="fs-5 mb-4">Chewy cold noodles made from wheat or rice flour, served with a spicy and tangy sauce, often topped with cucumbers and bean sprouts. Refreshing, especially on hot days.</p>
+                                    <!-- Optional: Add image if available -->
+                                    <!-- <img src="../../assets/img/xian/liangpi.jpg" alt="Liangpi - Cold Noodles" class="content-image mb-4"> -->
+
+                                    <h3 class="fw-bolder mb-3">Guan Tang Baozi (Soup Dumplings)</h3>
+                                    <p class="fs-5 mb-4">Steamed buns filled with savory meat and hot, flavorful broth. Be careful when eating – bite a small hole first to sip the soup before enjoying the rest.</p>
+                                    <!-- Optional: Add image if available -->
+                                    <!-- <img src="../../assets/img/xian/guantang_baozi.jpg" alt="Guan Tang Baozi - Soup Dumplings" class="content-image mb-4"> -->
+
+                                    <h3 class="fw-bolder mb-3">Hulatang (Spicy Pepper Soup)</h3>
+                                    <p class="fs-5 mb-4">A thick, peppery soup often enjoyed for breakfast. It contains various ingredients like beef, vegetables, and vermicelli, known for its warming and spicy kick.</p>
+
+                                    <h3 class="fw-bolder mb-3">Persimmon Cakes</h3>
+                                    <p class="fs-5 mb-4">A sweet treat made from persimmons, often filled with sweet bean paste or nuts, then fried until golden. Popular especially in autumn.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="accommodation">Where to Stay</h2>
+                                    <h3 class="fw-bolder mb-3">Inside the City Wall (Near Bell Tower/South Gate)</h3>
+                                    <p class="fs-5 mb-4">Central location, close to major attractions like the Bell Tower, Drum Tower, and Muslim Quarter. Offers a mix of hotels from budget hostels to mid-range and boutique options. Convenient for exploring on foot or by metro.</p>
+                                    <h3 class="fw-bolder mb-3">Near Big Wild Goose Pagoda (Qujiang New District)</h3>
+                                    <p class="fs-5 mb-4">A modern and greener area south of the City Wall. Home to luxury hotels, the Shaanxi History Museum, and Grand Tang Mall. Well-connected by metro. Offers a more relaxed atmosphere.</p>
+                                    <h3 class="fw-bolder mb-3">Near Xi'an North Railway Station</h3>
+                                    <p class="fs-5 mb-4">Convenient for travelers arriving or departing by high-speed train. Primarily business hotels and newer developments. Further from the main historical sites but easily accessible via metro.</p>
+                                    <h3 class="fw-bolder mb-3">Near the Airport (Xianyang)</h3>
+                                    <p class="fs-5 mb-4">Suitable for very early or late flights. Mostly airport hotels offering shuttle services. Located quite far from the city center.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="weather">Weather Guide</h2>
+                                    <h3 class="fw-bolder mb-3">Cold and Dry (Dec - Feb)</h3>
+                                    <p class="fs-5 mb-4">Around -1°C to 7°C (30°F - 45°F). Often below freezing, occasional snow. Dry air. Warm layers, coat, hat, gloves essential.</p>
+                                    <h3 class="fw-bolder mb-3">Mild and Variable (Mar - May)</h3>
+                                    <p class="fs-5 mb-4">8°C - 22°C (46°F - 72°F). Temperatures rise quickly. Spring can bring dust storms. Layers recommended, light jacket, maybe an umbrella.</p>
+                                    <h3 class="fw-bolder mb-3">Hot and Humid (Jun - Aug)</h3>
+                                    <p class="fs-5 mb-4">Above 25°C (77°F), often exceeding 32°C (90°F). High humidity, occasional heavy rain. Light, breathable clothing, sun protection, umbrella.</p>
+                                    <h3 class="fw-bolder mb-3">Cool and Pleasant (Sep - Nov)</h3>
+                                    <p class="fs-5 mb-4">10°C - 20°C (50°F - 68°F). Considered the best time to visit. Comfortable temperatures, clear skies. Light jacket, sweaters needed later in the season.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="must-do">Must-Do List</h2>
+                                    <ul class="task-list">
+                                        <li>Marvel at the Terracotta Army.</li>
+                                        <li>Cycle or walk along the ancient Xi'an City Wall.</li>
+                                        <li>Visit the Big Wild Goose Pagoda and enjoy the fountain show (check schedule).</li>
+                                        <li>Explore the bustling Muslim Quarter and sample street food.</li>
+                                        <li>Try Roujiamo (Chinese Hamburger) and Biangbiang Noodles.</li>
+                                        <li>Visit the Shaanxi History Museum to delve into China's past.</li>
+                                        <li>See the Bell Tower and Drum Tower in the city center.</li>
+                                        <li>Experience the vibrant atmosphere of the Grand Tang Mall at night.</li>
+                                        <li>Taste Yangrou Paomo (Lamb Soup with Bread).</li>
+                                        <li>Consider a Tang Dynasty Show for cultural entertainment.</li>
+                                        <li>Visit the Small Wild Goose Pagoda and Xi'an Museum.</li>
+                                        <li>Try Liangpi (Cold Noodles) for a refreshing snack.</li>
+                                    </ul>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="itineraries">Classic Tour Itineraries</h2>
+                                    <h3 class="fw-bolder mb-3">Two-Day Essential Xi'an</h3>
+                                    <p class="fs-5 mb-2"><strong>Day 1:</strong> Arrive. Terracotta Army (allow half a day). Return to city. Explore Muslim Quarter for dinner.</p>
+                                    <p class="fs-5 mb-4"><strong>Day 2:</strong> Morning cycle/walk on the City Wall. Visit Big Wild Goose Pagoda. Shaanxi History Museum (if time permits). Depart.</p>
+                                    <h3 class="fw-bolder mb-3">Three-Day Historical Immersion</h3>
+                                    <p class="fs-5 mb-2"><strong>Day 1:</strong> Arrive, check in (inside Wall). Shaanxi History Museum. Big Wild Goose Pagoda & evening fountain show.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 2:</strong> Full day trip to Terracotta Army & Huaqing Palace (optional).</p>
+                                    <p class="fs-5 mb-4"><strong>Day 3:</strong> Cycle/walk City Wall. Visit Bell & Drum Towers. Explore Muslim Quarter. Depart.</p>
+                                    <h3 class="fw-bolder mb-3">Four-Day Culture & Food Explorer</h3>
+                                    <p class="fs-5 mb-2"><strong>Day 1:</strong> Arrive, check in. Explore Muslim Quarter, try Roujiamo & Liangpi. Bell & Drum Towers.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 2:</strong> Terracotta Army (half day). Return. Shaanxi History Museum.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 3:</strong> Cycle/walk City Wall. Big Wild Goose Pagoda. Grand Tang Mall in the evening.</p>
+                                    <p class="fs-5 mb-4"><strong>Day 4:</strong> Visit Small Wild Goose Pagoda & Xi'an Museum. Try Yangrou Paomo or Biangbiang Noodles for lunch. Depart.</p>
+
+                                </section>
+                            </article>
+                        </div>
+                        <!-- Right Sidebar Column (Empty) -->
+                        <div class="col-lg-3">
+                            <!-- Sidebar Placeholder - This ID should match the one used in components.js -->
+                            <div id="destination-sidebar-placeholder">
+                                <!-- Content from destination_sidebar.html will be loaded here by components.js -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../../js/scripts.js"></script>
+        <!-- Components loader -->
+        <script src="../../js/components.js"></script>
+        <!-- Specific page script (if any) -->
+        <!-- <script src="specific-page.js"></script> -->
+    </body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Updated meta description and title for Hong Kong -->
+        <meta name="description" content="Explore Hong Kong, a vibrant fusion of East and West. Discover Victoria Peak, Disneyland, local cuisine like Dim Sum, and travel tips." />
+        <meta name="author" content="Wander in China" />
+        <title>Hong Kong Travel Guide - Wander in China Destination</title>
+        <!-- Favicon (Correct relative path from subpage/destination/ to root) -->
+        <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="32x32" />
+        <!-- Bootstrap icons (CDN link, no change needed) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (Correct relative path) -->
+        <link href="../../css/styles.css" rel="stylesheet" />
+        <style>
+            /* Styles copied from shanghai.html */
+            .content-image {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%; /* Adjust width as needed */
+            }
+            .gallery-img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                margin-bottom: 1rem;
+                border-radius: 0.25rem;
+            }
+            .header-image {
+                width: 100%;
+                height: auto;
+                margin-bottom: 2rem;
+                border-radius: 0.3rem;
+            }
+            /* Specific style for the Hong Kong header image */
+            #hongkong-header-img {
+                height: 300px; /* Adjust height as needed */
+                object-fit: cover;
+                object-position: center;
+            }
+            #floating-nav {
+                position: fixed;
+                left: 20px;
+                top: 150px;
+                width: 180px;
+                background-color: rgba(255, 255, 255, 0.85);
+                padding: 15px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                z-index: 1000;
+            }
+            #floating-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            #floating-nav ul li {
+                margin-bottom: 8px;
+            }
+            #floating-nav ul li a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+                padding: 5px;
+                border-radius: 3px;
+                transition: background-color 0.2s ease;
+                font-size: 0.9rem;
+            }
+            #floating-nav ul li a:hover {
+                background-color: #eee;
+                color: #000;
+            }
+            .task-list {
+                list-style: none;
+                padding-left: 0;
+            }
+            .task-list li {
+                position: relative;
+                padding-left: 2em;
+                margin-bottom: 0.8rem;
+                line-height: 1.6;
+            }
+            .task-list li::before {
+                content: "\F26E"; /* Bootstrap Icons check-lg */
+                font-family: 'bootstrap-icons';
+                position: absolute;
+                left: 0;
+                top: 0.1em;
+                font-size: 1.2em;
+                color: #28a745; /* Success green */
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Header Placeholder -->
+            <div id="header-placeholder"></div>
+
+            <!-- Floating Navigation Menu -->
+            <nav id="floating-nav">
+                <ul>
+                    <li><a href="#top">Top</a></li>
+                    <li><a href="#getting-there">Getting There</a></li>
+                    <li><a href="#getting-around">Getting Around</a></li>
+                    <li><a href="#attractions">Attractions</a></li>
+                    <li><a href="#food">Delicious Food</a></li>
+                    <li><a href="#accommodation">Where to stay</a></li>
+                    <li><a href="#weather">Weather</a></li>
+                    <li><a href="#must-do">Must-Do List</a></li>
+                    <li><a href="#itineraries">Classic Itineraries</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Section -->
+            <section class="py-5">
+                <div class="container px-lg-5 px-md-4 px-3 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <!-- Left Sidebar Column (Empty) -->
+                        <div class="col-lg-2 d-none d-lg-block">
+                            <!-- This column is intentionally left empty -->
+                            <!-- 'd-none d-lg-block' hides it on smaller screens -->
+                        </div>
+
+                        <!-- Main content column -->
+                        <div class="col-lg-7">
+                            <!-- Post content-->
+                            <article>
+                                <!-- Header Image - Verify this image exists -->
+                                <img src="../../assets/img/hongkong/the_peak.jpg" alt="Hong Kong Skyline at Night" class="header-image" id="hongkong-header-img">
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <!-- Post title-->
+                                    <h1 class="fw-bolder mb-1" id="top">Hong Kong: A Vibrant Fusion of East and West</h1>
+                                    <!-- Post meta content-->
+                                    <div class="text-muted fst-italic mb-2">Where History Meets Modernity</div>
+                                </header>
+                                <!-- Post content-->
+                                <section class="mb-5">
+                                    <p class="fs-5 mb-4">Hong Kong, a Special Administrative Region of China, is a captivating city where rich history meets dynamic modernity. It began as a small fishing village but grew into a significant British colony in the 19th century. This colonial past has profoundly shaped its legal system, architecture, and certain cultural aspects.</p>
+                                    <p class="fs-5 mb-4">Today, Hong Kong is a global financial hub, renowned for its impressive skyline and towering skyscrapers. It's a vital center for international trade, finance, and business, with a bustling port that facilitates global commerce.</p>
+                                    <p class="fs-5 mb-4">Culturally, Hong Kong is a unique blend of Eastern and Western influences. Traditional Chinese festivals are celebrated with great enthusiasm, while Western-style fashion, art, and entertainment also thrive. With its efficient transportation and diverse accommodation, Hong Kong welcomes travelers worldwide, offering an unforgettable experience of its multifaceted charm.</p>
+
+                                    <!-- Image Gallery - Verify these images exist -->
+                                    <h2 class="fw-bolder mb-4 mt-5">Hong Kong Highlights</h2>
+                                    <div class="row gx-4">
+                                        <div class="col-md-4">
+                                            <img src="../../assets/img/hongkong/the_peak2.jpg" alt="View from Victoria Peak" class="gallery-img">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../../assets/img/hongkong/avenue_of_star.jpg" alt="Avenue of Stars" class="gallery-img">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <img src="../../assets/img/hongkong/mongkok.jpg" alt="Mong Kok Street Scene" class="gallery-img">
+                                        </div>
+                                    </div>
+                                    <!-- End Image Gallery -->
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="getting-there">Getting To Hong Kong</h2>
+                                    <h3 class="fw-bolder mb-3">By Air</h3>
+                                    <p class="fs-5 mb-4">Hong Kong International Airport (HKG) is a major aviation hub, offering flights to destinations across the globe. Numerous international airlines operate here, ensuring convenient access for travelers. The airport also provides extensive facilities, including shopping, dining, and lounges.</p>
+                                    <h3 class="fw-bolder mb-3">By Train</h3>
+                                    <p class="fs-5 mb-4">The Guangzhou-Shenzhen-Hong Kong Express Rail Link provides a direct connection to mainland China. The Hong Kong terminus is at the Hong Kong West Kowloon Station. High-speed trains offer a fast and efficient way to travel from major Chinese cities like Guangzhou and Shenzhen.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="getting-around">Getting Around Hong Kong</h2>
+                                    <p class="fs-5 mb-4">Hong Kong boasts an excellent public transportation system, making it easy to navigate the city.</p>
+                                    <h3 class="fw-bolder mb-3">MTR (Mass Transit Railway)</h3>
+                                    <p class="fs-5 mb-4">The MTR is Hong Kong's primary public transport network. This clean, fast, and reliable subway system covers Hong Kong Island, Kowloon, and the New Territories. The Octopus Card is the most convenient way to pay; this rechargeable smart card is widely accepted on the MTR, buses, trams, and some ferries. Single-trip tickets are also available at MTR stations, and some stations accept mobile payments like AlipayHK and Tap & Go. Trains run frequently throughout the day.</p>
+                                    <h3 class="fw-bolder mb-3">Bus</h3>
+                                    <p class="fs-5 mb-4">Hong Kong has an extensive bus network, reaching areas not serviced by the MTR. Bus fares vary by route. Payment can be made with an Octopus Card or cash (exact change required), and some buses accept mobile payments. However, traffic congestion can cause delays, especially during peak hours. Bus routes are clearly signposted in English and Chinese.</p>
+                                    <h3 class="fw-bolder mb-3">Taxi</h3>
+                                    <p class="fs-5 mb-4">Taxis are readily available and metered. Red taxis operate throughout Hong Kong, green taxis serve the New Territories, and blue taxis serve Lantau Island. You can hail taxis on the street or find them at taxi stands outside major transport hubs and hotels. Ride-hailing apps like HKTaxi are also available.</p>
+                                    <h3 class="fw-bolder mb-3">Ferry</h3>
+                                    <p class="fs-5 mb-4">Ferries are a key mode of transport between Hong Kong Island, Kowloon, and the outlying islands. The Star Ferry is particularly popular for its iconic harbor crossings between Central (Hong Kong Island) and Tsim Sha Tsui (Kowloon), and between Wan Chai (Hong Kong Island) and Tsim Sha Tsui (Kowloon). Ferries operated by New World First Ferry serve the outlying islands, such as Cheung Chau, Mui Wo, and Peng Chau. You can pay with an Octopus Card or purchase tickets at the ferry terminal. Ferry terminals are conveniently located near major tourist attractions.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/star_ferry.jpg" alt="Star Ferry crossing Victoria Harbour" class="content-image mb-4">
+                                    <h3 class="fw-bolder mb-3">Tram</h3>
+                                    <p class="fs-5 mb-4">The tram runs along the northern part of Hong Kong Island, offering a unique and scenic way to explore the city. The fare is a flat rate, and payment can be made with an Octopus Card or cash.</p>
+                                    <h3 class="fw-bolder mb-3">Peak Tram</h3>
+                                    <p class="fs-5 mb-4">The Peak Tram provides access to Victoria Peak. Tickets can be purchased at the Lower Peak Tram Terminus in Central or pre-booked online. Payment options include Octopus Card, credit card, or cash. The tram ride itself offers stunning views as it ascends the mountain.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/peak_tram.jpg" alt="The Peak Tram ascending" class="content-image mb-4">
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="attractions">Famous Attractions</h2>
+                                    <h3 class="fw-bolder mb-3">Victoria Peak (The Peak)</h3>
+                                    <p class="fs-5 mb-4">As the highest point on Hong Kong Island, Victoria Peak offers panoramic views of the city skyline, Victoria Harbour, and the surrounding landscapes. The Peak Tram ride is a thrilling experience, and the viewing platforms are ideal for capturing photos.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/the_peak2.jpg" alt="View from Victoria Peak" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Hong Kong Disneyland</h3>
+                                    <p class="fs-5 mb-4">This magical theme park features classic Disney attractions, parades, and shows. Meeting beloved Disney characters and enjoying rides like Space Mountain make it a top destination for family fun and fantasy.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/disney.jpg" alt="Hong Kong Disneyland Castle" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Ocean Park Hong Kong</h3>
+                                    <p class="fs-5 mb-4">Ocean Park combines marine animal exhibits with exciting rides. Visitors can enjoy dolphin shows, explore the aquarium, and experience thrilling roller coasters.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/ocean_park.jpg" alt="Ocean Park Hong Kong" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">The Avenue of Stars</h3>
+                                    <p class="fs-5 mb-4">Located along the Tsim Sha Tsui waterfront, the Avenue of Stars celebrates Hong Kong's film industry. It features handprints of famous stars, views of Hong Kong Island, and the Symphony of Lights show.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/avenue_of_star2.jpg" alt="Avenue of Stars waterfront" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Po Lin Monastery and the Big Buddha</h3>
+                                    <p class="fs-5 mb-4">Situated on Lantau Island, Po Lin Monastery provides a serene and peaceful atmosphere. The Tian Tan Buddha, a large statue, is a major symbol of peace and spirituality. The monastery's beautiful scenery and spiritual significance attract many visitors.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/big_buddha.jpg" alt="Tian Tan Buddha (Big Buddha)" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Mong Kok's Fa Yuen Street (Sneaker Street)</h3>
+                                    <p class="fs-5 mb-4">This lively street is renowned for its extensive selection of sneakers and sportswear. The bustling stalls, street food vendors, and lively atmosphere offer a glimpse into Hong Kong's everyday life.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/mongkok.jpg" alt="Mong Kok street scene" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Night Markets (Temple Street)</h3>
+                                    <p class="fs-5 mb-4">Hong Kong's night markets, such as Temple Street Night Market, are a must-visit. Visitors can browse stalls selling souvenirs, clothing, and local snacks. Bargaining is common and part of the experience.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/temple_street.jpg" alt="Temple Street Night Market" class="content-image mb-4">
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="food">Delicious Hong Kong</h2>
+                                    <p class="fs-5 mb-4">Hong Kong's cuisine is a delightful blend of Cantonese traditions and international influences. Here are some dishes you shouldn't miss:</p>
+
+                                    <h3 class="fw-bolder mb-3">Dim Sum</h3>
+                                    <p class="fs-5 mb-4">Dim sum is a Cantonese culinary tradition featuring a wide variety of small, bite-sized dishes. Dishes like siu mai (pork dumplings) and har gow (shrimp dumplings) are enjoyed as a social dining experience, often served in bamboo steamers.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/dimsum.jpg" alt="Assortment of Dim Sum" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Hong Kong-style Milk Tea</h3>
+                                    <p class="fs-5 mb-4">This popular beverage is made by blending black tea with evaporated milk. It's known for its rich, smooth, and slightly sweet flavor. The "pulling" technique used in its preparation gives it a unique texture.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/milk_tea.jpg" alt="Hong Kong-style Milk Tea" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Egg Tart</h3>
+                                    <p class="fs-5 mb-4">These tarts consist of a flaky, buttery crust filled with a smooth, creamy egg custard. The combination of the sweet filling and crispy crust is a classic Hong Kong treat.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/egg_tart.jpg" alt="Hong Kong Egg Tarts" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Wonton Noodles</h3>
+                                    <p class="fs-5 mb-4">This dish features fine wheat noodles served in a flavorful broth with plump wontons filled with pork and shrimp. The broth is typically clear and rich, often made from pork bones.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/wonton_noodles.jpg" alt="Wonton Noodle Soup" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Pineapple Bun</h3>
+                                    <p class="fs-5 mb-4">Despite its name, this bun doesn't contain pineapple. It has a sweet, crumbly topping that resembles the texture of a pineapple. It's commonly eaten plain or with a slab of butter.</p>
+
+                                    <h3 class="fw-bolder mb-3">Curry Fish Balls</h3>
+                                    <p class="fs-5 mb-4">These are fish balls made from minced fish and cooked in a fragrant curry sauce. They are chewy, flavorful, and often sold at street stalls on skewers.</p>
+
+                                    <h3 class="fw-bolder mb-3">Roast Goose</h3>
+                                    <p class="fs-5 mb-4">The goose is marinated with seasonings and roasted to achieve a crispy, golden-brown skin. The meat is tender, juicy, and savory. It's usually served with plum sauce.</p>
+                                    <!-- Verify this image exists -->
+                                    <img src="../../assets/img/hongkong/roast_goose.jpg" alt="Roast Goose" class="content-image mb-4">
+
+                                    <h3 class="fw-bolder mb-3">Mango Sago with Pomelo</h3>
+                                    <p class="fs-5 mb-4">This is a refreshing dessert made with sweet mango puree, chewy sago pearls, and slightly bitter pomelo pieces. The contrasting textures and flavors create a delightful treat, especially popular during warmer months.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="accommodation">Where to Stay</h2>
+                                    <h3 class="fw-bolder mb-3">Central & Admiralty (Hong Kong Island)</h3>
+                                    <p class="fs-5 mb-4">The business and financial heart. Offers luxury hotels, fine dining, and high-end shopping. Excellent transport links via MTR. Close to attractions like Victoria Peak.</p>
+                                    <h3 class="fw-bolder mb-3">Tsim Sha Tsui (Kowloon)</h3>
+                                    <p class="fs-5 mb-4">A vibrant tourist hub with stunning harbor views. Wide range of hotels, shopping malls (Harbour City), museums, and the Avenue of Stars. Easily accessible by MTR and Star Ferry.</p>
+                                    <h3 class="fw-bolder mb-3">Causeway Bay (Hong Kong Island)</h3>
+                                    <p class="fs-5 mb-4">Known for its bustling shopping streets (Times Square) and diverse dining options. Offers mid-range to luxury hotels. Well-connected by MTR and trams.</p>
+                                    <h3 class="fw-bolder mb-3">Mong Kok (Kowloon)</h3>
+                                    <p class="fs-5 mb-4">A lively, densely populated area famous for its markets (Ladies' Market, Sneaker Street) and local eateries. Offers more budget-friendly accommodation options. Great for experiencing local life.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="weather">Weather Guide</h2>
+                                    <h3 class="fw-bolder mb-3">Cool and Dry (Dec - Feb)</h3>
+                                    <p class="fs-5 mb-4">Around 15°C - 20°C (59°F - 68°F). Pleasant, sunny days are common. Light jacket, sweaters needed, especially in the evenings.</p>
+                                    <h3 class="fw-bolder mb-3">Warm and Humid (Mar - May)</h3>
+                                    <p class="fs-5 mb-4">20°C - 27°C (68°F - 81°F). Increasing humidity, occasional fog and rain. Light clothing, maybe a light jacket. Umbrella useful.</p>
+                                    <h3 class="fw-bolder mb-3">Hot and Humid with Typhoons (Jun - Aug)</h3>
+                                    <p class="fs-5 mb-4">Above 28°C (82°F), often exceeding 31°C (88°F). Very high humidity, frequent rain, and potential typhoons. Light, breathable clothing. Stay updated on weather warnings.</p>
+                                    <h3 class="fw-bolder mb-3">Pleasant and Sunny (Sep - Nov)</h3>
+                                    <p class="fs-5 mb-4">23°C - 28°C (73°F - 82°F). Considered the best time to visit. Comfortable temperatures, lower humidity, sunny days. T-shirts, light trousers. Light jacket for later in the season.</p>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="must-do">Must-Do List</h2>
+                                    <ul class="task-list">
+                                        <li>Take the Peak Tram up to Victoria Peak for stunning city views.</li>
+                                        <li>Ride the iconic Star Ferry across Victoria Harbour.</li>
+                                        <li>Experience the magic at Hong Kong Disneyland or Ocean Park.</li>
+                                        <li>Indulge in a traditional Dim Sum meal.</li>
+                                        <li>Stroll along the Avenue of Stars and enjoy the Symphony of Lights.</li>
+                                        <li>Explore the bustling streets and markets of Mong Kok.</li>
+                                        <li>Visit the Po Lin Monastery and the Big Buddha on Lantau Island.</li>
+                                        <li>Try Hong Kong-style Milk Tea and Egg Tarts.</li>
+                                        <li>Ride the historic double-decker tram on Hong Kong Island.</li>
+                                        <li>Shop for bargains at the Temple Street Night Market.</li>
+                                        <li>Hike one of Hong Kong's scenic trails (e.g., Dragon's Back).</li>
+                                        <li>Enjoy fresh seafood on an outlying island like Lamma or Cheung Chau.</li>
+                                        <li>Visit a traditional wet market to see local life.</li>
+                                        <li>Savor delicious Roast Goose.</li>
+                                    </ul>
+
+                                    <h2 class="fw-bolder mb-4 mt-5" id="itineraries">Classic Tour Itineraries</h2>
+                                    <h3 class="fw-bolder mb-3">Three-Day Highlights Route</h3>
+                                    <p class="fs-5 mb-2"><strong>Day 1:</strong> Arrive, check in (Tsim Sha Tsui). Explore Tsim Sha Tsui waterfront, Avenue of Stars. Star Ferry to Central. Peak Tram to Victoria Peak for sunset/night views. Dinner in Central/SoHo.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 2:</strong> Morning Dim Sum. MTR to Lantau Island. Ngong Ping 360 Cable Car (optional) to Big Buddha & Po Lin Monastery. Return. Evening explore Mong Kok markets (Ladies' Market, Temple Street).</p>
+                                    <p class="fs-5 mb-4"><strong>Day 3:</strong> Ride the tram on Hong Kong Island (Causeway Bay/Wan Chai). Explore local neighborhoods. Shopping or visit a museum (e.g., Hong Kong Museum of History). Depart.</p>
+                                    <h3 class="fw-bolder mb-3">Four-Day Family Fun Route</h3>
+                                    <p class="fs-5 mb-2"><strong>Day 1:</strong> Arrive, check in. Afternoon explore hotel area. Star Ferry ride. Symphony of Lights.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 2:</strong> Full day at Hong Kong Disneyland.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 3:</strong> Full day at Ocean Park Hong Kong.</p>
+                                    <p class="fs-5 mb-4"><strong>Day 4:</strong> Morning visit Victoria Peak (daytime view). Last minute souvenir shopping. Depart.</p>
+                                    <h3 class="fw-bolder mb-3">Five-Day Culture & Foodie Route</h3>
+                                    <p class="fs-5 mb-2"><strong>Day 1:</strong> Arrive, check in (Central/Sheung Wan). Explore Hollywood Road (antiques), Man Mo Temple. Dinner in SoHo.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 2:</strong> Morning Dim Sum. Visit Wong Tai Sin Temple. Explore Sham Shui Po (electronics, fabrics, local food). Evening Temple Street Night Market.</p>
+                                    <p class="fs-5 mb-2"><strong>Day 3:</strong> Day trip to an outlying island (e.g., Cheung Chau for seafood and cycling, or Lamma Island for hiking and beaches).</p>
+                                    <p class="fs-5 mb-2"><strong>Day 4:</strong> Peak Tram & Victoria Peak. Explore Causeway Bay (shopping, food). Try local desserts (Mango Sago). Evening explore Wan Chai bars/restaurants.</p>
+                                    <p class="fs-5 mb-4"><strong>Day 5:</strong> Visit a wet market. Try Wonton Noodles and Roast Goose for lunch. Depart.</p>
+
+                                </section>
+                            </article>
+                        </div>
+                        <div class="col-lg-3">
+                            <!-- Sidebar Placeholder - This ID should match the one used in components.js -->
+                            <div id="destination-sidebar-placeholder">
+                                <!-- Content from destination_sidebar.html will be loaded here by components.js -->
+                            </div>
+                        </div><!-- Sidebar widgets (Optional, can be added later if needed) -->
+                        <!-- <div class="col-lg-4"> ... </div> -->
+                    </div>
+
+                    <!-- Right Sidebar Column (Placeholder) -->
+
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Placeholder -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Bootstrap core JS (CDN link) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS (Correct relative path) -->
+        <script src="../../js/scripts.js"></script>
+        <!-- Components loader -->
+        <script src="../../js/components.js"></script> <!-- Ensure this loads header/footer -->
+    </body>
+</html>
+
+                        <!-- Right Sidebar Column (Empty) -->
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <!-- This column is intentionally left empty for layout consistency -->
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar Column (Placeholder) -->
+                    <div class="col-lg-3 d-none d-lg-block">
+                        <!-- This column reserved for future content -->
+                    </div>
+                </div>
+            </section>

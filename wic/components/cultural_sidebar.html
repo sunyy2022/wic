@@ -1,0 +1,247 @@
+<!-- Cultural Experience Sidebar -->
+<div class="bg-light p-3 rounded">
+    <!-- Recent Posts Card (Copied from sidebar.html) -->
+    <div class="card shadow-sm mb-4" id="sidebar-recent-posts-card"> <!-- Use ID from original sidebar -->
+        <div class="card-header fw-bold fs-5 sidebar-card-header">Recent Posts</div>
+        <div class="card-body p-0">
+            <div class="list-group list-group-flush" id="recent-posts-list"> <!-- Use ID from original sidebar -->
+                <!-- Recent posts will be loaded here by JavaScript -->
+                <div class="p-3 text-muted small">Loading posts...</div>
+            </div>
+        </div>
+    </div>
+    <!-- Cultural Experience You May Like Card -->
+    <div class="card shadow-sm" id="cultural-experience-sidebar-card">
+        <div class="card-header fw-bold fs-5 sidebar-card-header">Cultural Experience You May Like</div>
+        <div class="card-body p-0">
+            <div class="list-group list-group-flush" id="cultural-experience-list">
+                <!-- Cultural experiences will be loaded here by JavaScript -->
+                <div class="p-3 text-muted small">Loading recommendations...</div>
+            </div>
+        </div>
+    </div>
+    <!-- You can add more sidebar widgets here if needed -->
+
+    <!-- Add style for consistent image height -->
+    <style>
+        .sidebar-item-img {
+            height: 60px; /* Or your desired height */
+            width: 100%; /* Ensure it fills the col-4 container width */
+            object-fit: cover; /* Crop image to fit container while maintaining aspect ratio */
+        }
+    </style>
+
+    <!-- Script specific to cultural sidebar content loading -->
+    <script>
+        // 将函数暴露到全局作用域，避免命名冲突
+        window.initializeCulturalSidebar = function() {
+            console.log("Cultural Sidebar script executing...");
+
+            const culturalListElement = document.getElementById('cultural-experience-list');
+            if (!culturalListElement) {
+                console.error("Cultural Sidebar: Could not find the list element #cultural-experience-list.");
+                return;
+            }
+
+            // --- Calculate relativePathPrefix ---
+            // This calculation needs to be relative to the *main page* loading the sidebar
+            const currentPath = window.location.pathname;
+            const isSubpage = currentPath.includes('/subpage/');
+            const relativePathPrefix = isSubpage ? '../../' : './';
+            console.log("Cultural Sidebar: Current Path:", currentPath);
+            console.log("Cultural Sidebar: Is Subpage:", isSubpage);
+            console.log("Cultural Sidebar: Calculated relativePathPrefix:", relativePathPrefix);
+            // --- End Calculate relativePathPrefix ---
+
+            // Function to populate a list group with general post links (Copied from sidebar.html)
+            function populatePostList(listElement, postsToShow) {
+                if (!listElement) return;
+                listElement.innerHTML = ''; // Clear previous content (like "Loading...")
+
+                if (!postsToShow || postsToShow.length === 0) {
+                    listElement.innerHTML = '<div class="p-3 text-muted small">No posts to display.</div>';
+                    return;
+                }
+
+                postsToShow.forEach(post => {
+                    const listItem = document.createElement('a');
+                    const finalUrl = relativePathPrefix + post.url; // post.url is relative to root
+                    console.log(`Sidebar (Recent): Linking to: ${finalUrl} (from post.url: ${post.url})`);
+
+                    listItem.href = finalUrl; // Use the calculated final URL
+                    listItem.classList.add('list-group-item', 'list-group-item-action', 'd-flex', 'align-items-center', 'p-2'); // Added p-2 for padding
+
+                    // Image container (1/3 width)
+                    const imgContainer = document.createElement('div');
+                    imgContainer.classList.add('col-4', 'pe-2'); // Added padding-end
+                    const img = document.createElement('img');
+                    const imageUrl = relativePathPrefix + (post.image || 'assets/img/placeholder.jpg'); // Use placeholder if no image
+                    console.log(`Sidebar (Recent): Image source: ${imageUrl} (from post.image: ${post.image})`);
+                    img.src = imageUrl;
+                    img.alt = post.title;
+                    img.classList.add('img-fluid', 'rounded', 'sidebar-item-img'); // Use the shared style
+                    img.onerror = function() {
+                        console.warn(`Sidebar (Recent): Failed to load image: ${this.src}. Using placeholder.`);
+                        this.src = relativePathPrefix + 'assets/img/placeholder.jpg'; // Fallback placeholder relative path
+                        this.onerror = null; // Prevent infinite loop if placeholder also fails
+                    };
+                    imgContainer.appendChild(img);
+
+                    // Title container (2/3 width)
+                    const titleContainer = document.createElement('div');
+                    titleContainer.classList.add('col-8');
+                    const maxTitleLength = 45; // Adjust as needed
+                    titleContainer.textContent = post.title.length > maxTitleLength ? post.title.substring(0, maxTitleLength) + '...' : post.title;
+                    titleContainer.title = post.title; // Add full title on hover
+
+                    listItem.appendChild(imgContainer);
+                    listItem.appendChild(titleContainer);
+
+                    listElement.appendChild(listItem);
+                });
+            }
+
+            // Function to populate a list group with cultural experience links (Original function renamed)
+            function populateCulturalExperienceList(listElement, postsToShow) {
+                listElement.innerHTML = ''; // Clear previous content
+
+                if (!postsToShow || postsToShow.length === 0) {
+                    listElement.innerHTML = '<div class="p-3 text-muted small">No experiences to display.</div>';
+                    return;
+                }
+
+                postsToShow.forEach(post => {
+                    const listItem = document.createElement('a');
+                    const finalUrl = relativePathPrefix + post.url; // post.url is relative to root
+                    console.log(`Cultural Sidebar (Experience): Linking to: ${finalUrl} (from post.url: ${post.url})`);
+
+                    listItem.href = finalUrl;
+                    listItem.classList.add('list-group-item', 'list-group-item-action', 'd-flex', 'align-items-center', 'p-2');
+
+                    // Image container
+                    const imgContainer = document.createElement('div');
+                    imgContainer.classList.add('col-4', 'pe-2');
+                    const img = document.createElement('img');
+                    const imageUrl = relativePathPrefix + (post.image || 'assets/img/placeholder.jpg'); // image path relative to root
+                    console.log(`Cultural Sidebar (Experience): Image source: ${imageUrl} (from post.image: ${post.image})`);
+                    img.src = imageUrl;
+                    img.alt = post.title;
+                    // Add the new class here
+                    img.classList.add('img-fluid', 'rounded', 'sidebar-item-img');
+                    img.onerror = function() {
+                        console.warn(`Cultural Sidebar (Experience): Failed to load image: ${this.src}. Using placeholder.`);
+                        this.src = relativePathPrefix + 'assets/img/placeholder.jpg';
+                        this.onerror = null;
+                    };
+                    imgContainer.appendChild(img);
+
+                    // Title container
+                    const titleContainer = document.createElement('div');
+                    titleContainer.classList.add('col-8');
+                    const maxTitleLength = 45;
+                    titleContainer.textContent = post.title.length > maxTitleLength ? post.title.substring(0, maxTitleLength) + '...' : post.title;
+                    titleContainer.title = post.title;
+
+                    listItem.appendChild(imgContainer);
+                    listItem.appendChild(titleContainer);
+                    listElement.appendChild(listItem);
+                });
+            }
+
+            // Function to shuffle an array (Fisher-Yates algorithm)
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+                }
+                return array;
+            }
+
+            // Get list elements
+            const recentPostsList = document.getElementById('recent-posts-list');
+
+            // --- Fetch General Blog Posts Data (for Recent Posts) ---
+            const blogsJsonPath = relativePathPrefix + 'data/blogs.json';
+            console.log("Cultural Sidebar: Fetching general blogs data from:", blogsJsonPath);
+
+            fetch(blogsJsonPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} fetching ${blogsJsonPath}`);
+                    }
+                    return response.json();
+                })
+                .then(posts => {
+                    console.log("Cultural Sidebar: Successfully fetched general posts data:", posts);
+                    if (!Array.isArray(posts)) {
+                        console.warn("Cultural Sidebar: General posts data is not an array:", posts);
+                        if (recentPostsList) recentPostsList.innerHTML = '<div class="p-3 text-warning small">Could not load recent posts.</div>';
+                        return;
+                    }
+                    if (recentPostsList) {
+                        console.log("Cultural Sidebar: Populating recent posts...");
+                        const sortedPosts = [...posts].sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
+                        populatePostList(recentPostsList, sortedPosts.slice(0, 3)); // Use the copied function
+                        console.log("Cultural Sidebar: Recent posts populated.");
+                    } else {
+                        console.log("Cultural Sidebar: Recent posts list element not found.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Cultural Sidebar: Error loading or processing general posts:', error);
+                    if (recentPostsList) recentPostsList.innerHTML = `<div class="p-3 text-danger small">加载最近帖子失败: ${error.message}</div>`;
+                });
+
+            // --- Fetch Cultural Experiences Data ---
+            const culturalJsonPath = relativePathPrefix + 'data/cultural_experiences.json';
+            console.log("Cultural Sidebar: Fetching cultural experiences data from:", culturalJsonPath);
+
+            fetch(culturalJsonPath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status} fetching ${culturalJsonPath}`);
+                    }
+                    return response.json();
+                })
+                .then(experiences => {
+                    console.log("Cultural Sidebar: Successfully fetched cultural experiences:", experiences);
+                    if (!Array.isArray(experiences) || experiences.length === 0) {
+                        console.warn("Cultural Sidebar: Experiences data is empty or not an array.");
+                        culturalListElement.innerHTML = '<div class="p-3 text-muted small">No experiences available.</div>';
+                        return;
+                    }
+
+                    // --- Populate Cultural Experience List ---
+                    console.log("Cultural Sidebar: Populating cultural experiences list...");
+                    // Find the current article's URL to exclude it
+                    const pathSegments = currentPath.split('/');
+                    const currentArticleUrlFilename = pathSegments.pop() || pathSegments.pop();
+                    const currentArticleJsonUrl = isSubpage ? currentPath.substring(currentPath.indexOf('/subpage/')).replace(/^\//, '') : currentArticleUrlFilename;
+                    console.log("Cultural Sidebar: Current article JSON URL:", currentArticleJsonUrl);
+
+                    // Filter out the current article
+                    const otherExperiences = experiences.filter(exp => exp.url !== currentArticleJsonUrl);
+
+                    // Shuffle the remaining experiences and take the top 3
+                    const randomExperiences = shuffleArray(otherExperiences).slice(0, 3);
+
+                    populateCulturalExperienceList(culturalListElement, randomExperiences); // Use renamed function
+                    console.log("Cultural Sidebar: Cultural experiences list populated.");
+                })
+                .catch(error => {
+                    console.error('Cultural Sidebar: Error loading or processing experiences:', error);
+                    culturalListElement.innerHTML = `<div class="p-3 text-danger small">加载失败: ${error.message}</div>`;
+                });
+        }
+
+        // Initialize the sidebar when the DOM is ready
+        // Note: This script runs *after* being loaded into the main page.
+        // The main page's component loader should call initializeCulturalSidebar()
+        // We keep this DOMContentLoaded listener as a fallback or for direct use.
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeCulturalSidebar);
+        } else {
+            setTimeout(initializeCulturalSidebar, 0); // Ensure it runs after current execution context
+        }
+    </script>
+</div>

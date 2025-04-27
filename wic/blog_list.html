@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Update Meta Info -->
+        <meta name="description" content="Browse and search through helpful blog posts about traveling in China." />
+        <meta name="author" content="Wander in China" />
+        <title>Blog - Wander in China</title>
+        <!-- Favicon (Correct relative path from subpage/blogs/ to root) -->
+        <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="32x32" />
+        <!-- Bootstrap icons (CDN link, no change needed) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (Correct relative path) -->
+        <link href="../../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- 页头占位符 -->
+            <div id="header-placeholder"></div>
+
+            <!-- 页面内容 -->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="text-center mb-5">
+                        <h1 class="fw-bolder">Travel Blog</h1>
+                        <p class="lead fw-normal text-muted mb-0">Tips, guides, and stories for your China adventure</p>
+                    </div>
+
+                    <!-- Search Input -->
+                    <div class="row gx-5 justify-content-center mb-5">
+                        <div class="col-lg-8 col-xl-6">
+                            <form id="search-form">
+                                <div class="input-group">
+                                    <input type="search" id="search-input" class="form-control form-control-lg" placeholder="Search blog posts..." aria-label="Search blog posts">
+                                    <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Blog List Container -->
+                    <div class="row gx-5" id="blog-list-container">
+                        <!-- Blog posts will be loaded here by JavaScript -->
+                        <div class="col-12 text-center" id="loading-indicator">
+                            <p>Loading posts...</p>
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center d-none" id="no-results-message">
+                            <p>No matching blog posts found.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 页脚占位符 -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Bootstrap core JS (CDN link, no change needed) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS (Correct relative path) -->
+        <script src="../../js/scripts.js"></script>
+        <!-- Components loader (Correct relative path) -->
+        <script src="../../js/components.js"></script>
+
+        <!-- Custom JS for Blog List -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const blogListContainer = document.getElementById('blog-list-container');
+                const searchInput = document.getElementById('search-input');
+                const searchForm = document.getElementById('search-form');
+                const loadingIndicator = document.getElementById('loading-indicator');
+                const noResultsMessage = document.getElementById('no-results-message');
+                let allBlogPosts = []; // To store all fetched posts
+
+                // Function to render blog posts
+                function renderBlogPosts(posts) {
+                    blogListContainer.innerHTML = ''; // Clear previous results or loading indicator
+                    noResultsMessage.classList.add('d-none'); // Hide no results message initially
+
+                    if (posts.length === 0) {
+                        noResultsMessage.classList.remove('d-none'); // Show no results message
+                        return;
+                    }
+
+                    posts.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.classList.add('col-lg-4', 'mb-5');
+                        // Construct the inner HTML for the card - Removed JS comments from the string
+                        postElement.innerHTML = `
+                            <div class="card h-100 shadow border-0">
+                                ${post.image ? `<img class="card-img-top" src="${post.image}" alt="${post.title}" style="height: 180px; object-fit: cover;" onerror="this.style.display='none'; console.error('Failed to load image: ${post.image}')" />` : ''}
+                                <div class="card-body p-4">
+                                    <a class="text-decoration-none link-dark stretched-link" href="${post.url}"><h4 class="card-title mb-3 fw-bold">${post.title}</h4></a>
+                                    <p class="card-text mb-0 small text-muted">${post.description}</p>
+                                </div>
+                                <div class="card-footer p-3 pt-0 bg-transparent border-top-0">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="text-muted small">
+                                            <i class="bi bi-calendar-event me-1"></i> ${post.creationDate ? post.creationDate : 'N/A'}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                        blogListContainer.appendChild(postElement);
+                    });
+                }
+
+                // Function to filter posts based on search term
+                function filterPosts(term) {
+                    const lowerCaseTerm = term.toLowerCase().trim();
+                    if (!lowerCaseTerm) {
+                        renderBlogPosts(allBlogPosts); // Show all if search is empty
+                        return;
+                    }
+
+                    const filteredPosts = allBlogPosts.filter(post => {
+                        const titleMatch = post.title.toLowerCase().includes(lowerCaseTerm);
+                        const descriptionMatch = post.description.toLowerCase().includes(lowerCaseTerm);
+                        const tagsMatch = post.tags && post.tags.some(tag => tag.toLowerCase().includes(lowerCaseTerm));
+                        return titleMatch || descriptionMatch || tagsMatch;
+                    });
+
+                    renderBlogPosts(filteredPosts);
+                }
+
+                // Fetch blog data from JSON
+                fetch('../../data/blogs.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        // Sort data by creationDate descending (newest first) before storing
+                        allBlogPosts = data.sort((a, b) => {
+                            const dateA = a.creationDate ? new Date(a.creationDate) : new Date(0);
+                            const dateB = b.creationDate ? new Date(b.creationDate) : new Date(0);
+                            return dateB - dateA; // Sort descending
+                        });
+                        loadingIndicator.classList.add('d-none'); // Hide loading indicator
+                        renderBlogPosts(allBlogPosts); // Initial render with sorted data
+                    })
+                    .catch(error => {
+                        console.error('Error fetching blog posts:', error);
+                        loadingIndicator.innerHTML = '<p class="text-danger">Could not load blog posts. Please try again later.</p>';
+                    });
+
+                // Add event listener for search input
+                searchInput.addEventListener('input', (event) => {
+                    filterPosts(event.target.value);
+                });
+
+                // Prevent form submission from reloading the page
+                 searchForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+                    filterPosts(searchInput.value);
+                });
+            });
+        </script>
+    </body>
+</html>

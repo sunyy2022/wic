@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Beijing Opera (Peking Opera)",
+    "description": "Explore the rich history, unique artistic forms, and cultural significance of Beijing Opera.",
+    "url": "subpage/cultural_experience/beijing_opera.html",
+    "image": "assets/img/beijing_opera2.jpg",
+    "tags": ["opera", "peking opera", "beijing", "performance", "art", "traditional", "culture", "mask"]
+  },
+  {
+    "title": "Chinese Calligraphy",
+    "description": "Discover the art of Chinese calligraphy, its history, styles, tools (Four Treasures of the Study), and cultural importance.",
+    "url": "subpage/cultural_experience/chinese_calligraphy.html",
+    "image": "assets/img/calligraphy.jpg", 
+    "tags": ["calligraphy", "shufa", "writing", "art", "ink", "brush", "paper", "culture", "traditional"]
+  },
+  {
+    "title": "Chinese Paper-cutting (Jianzhi)",
+    "description": "Learn about the intricate art of Chinese paper-cutting, its history, techniques, symbolism, and regional variations.",
+    "url": "subpage/cultural_experience/paper_cutting.html",
+    "image": "assets/img/paper_cutting.jpg", 
+    "tags": ["paper cutting", "jianzhi", "art", "craft", "folk art", "scissors", "paper", "culture", "traditional", "decoration"]
+  },
+  {
+    "title": "Tea-Drinking Culture in China",
+    "description": "Delve into the profound tea culture of China, exploring its history, tea types, ceremonies, and social significance.",
+    "url": "subpage/cultural_experience/tea_drinking.html",
+    "image": "assets/img/tea.jpg", 
+    "tags": ["tea", "cha", "tea ceremony", "gongfu cha", "culture", "drink", "health", "tradition", "teahouse"]
+  }
+]

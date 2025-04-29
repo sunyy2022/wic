@@ -1,11 +1,27 @@
 [
   {
+    "title": "The Ultimate Guide to Shanghai's Bund: Where History Meets Modern China",
+    "description": "Discover Shanghai's iconic Bund, a 1.5km waterfront promenade featuring historic buildings, spectacular river views, and vibrant nightlife.",
+    "url": "subpage/blogs/The-Ultimate-Guide-to-Shanghai-Bund.html",
+    "image": "assets/img/night_view_the_bund.png",
+    "tags": ["shanghai", "the bund", "architecture", "history", "night view", "photography", "sightseeing", "landmark"],
+    "creationDate": "2025-04-15"
+  },
+  {
+    "title": "Beijing's Great Wall Guide: Which Section Should You Visit?",
+    "description": "Discover the best Great Wall sections near Beijing, from the popular Badaling to the wild Simatai. Compare accessibility, scenery, and crowds to choose your perfect Great Wall experience.",
+    "url": "subpage/blogs/the-great-wall-guide-2025.html",
+    "image": "assets/img/theGreatWall.png",
+    "tags": ["beijing", "great wall", "badaling", "mutianyu", "simatai", "jinshanling", "hiking", "history", "landmark"],
+    "creationDate": "2025-04-12"
+  },
+  {
     "title": "10 Essential Things to Know Before Visiting China",
     "description": "Key tips covering visas, currency, language, transportation, and cultural etiquette for your first trip to China.",
     "url": "subpage/blogs/essential_things.html", 
     "image": "assets/img/essential_things.jpg",   
     "tags": ["visa", "currency", "language", "transport", "etiquette", "tips", "planning", "essential"],
-    "creationDate": "2024-05-10"
+    "creationDate": "2025-03-10"
   },
   {
     "title": "Pay Like a Local: WeChat Pay & Alipay Guide",
@@ -13,7 +29,7 @@
     "url": "subpage/blogs/mobile_payment.html",
     "image": "assets/img/alipay_wechat.png",  
     "tags": ["payment", "mobile", "wechat pay", "alipay", "cashless", "money", "finance"],
-    "creationDate": "2024-05-15"
+    "creationDate": "2025-03-15"
   },
   {
     "title": "Staying Connected in China: eSIMs, Wi-Fi & More",
@@ -21,7 +37,7 @@
     "url": "subpage/blogs/stay_connected.html", 
     "image": "assets/img/phone.jpg",         
     "tags": ["internet", "wifi", "sim card", "esim", "vpn", "connectivity", "phone", "network"],
-    "creationDate": "2024-05-20"
+    "creationDate": "2025-02-20"
   },
   {
     "title": "Unique Stays in China: Courtyards to Theme Hotels",
@@ -29,7 +45,7 @@
     "url": "subpage/blogs/accommondation.html", 
     "image": "assets/img/siheyuan.jpg", 
     "tags": ["hotel", "accommodation", "stay", "siheyuan", "hostel", "homestay", "luxury", "lodging"],
-    "creationDate": "2024-05-25"
+    "creationDate": "2025-02-25"
   },
   { 
     "title": "Step-by-Step Guide to Applying for a Chinese Visa",
@@ -37,7 +53,7 @@
     "url": "subpage/blogs/apply_visa.html", 
     "image": "assets/img/visa.jpg", 
     "tags": ["visa", "application", "tourist", "L-type", "transit", "visa-free", "policy", "requirements", "documents"],
-    "creationDate": "2024-05-30" 
+    "creationDate": "2025-03-30" 
   },
   { 
     "title": "Conquering the Language Barrier in China",
@@ -45,7 +61,7 @@
     "url": "subpage/blogs/language_barrier.html", 
     "image": "assets/img/greeting.jpg", 
     "tags": ["language", "mandarin", "translation", "apps", "phrases", "communication", "barrier", "tips", "english"],
-    "creationDate": "2024-06-01" 
+    "creationDate": "2025-04-01" 
   },
   { 
     "title": "Navigating China: A Local's Guide to Public Transportation",
@@ -53,7 +69,7 @@
     "url": "subpage/blogs/public_transportation.html", 
     "image": "assets/img/subway.jpg",
     "tags": ["transport", "public transport", "subway", "metro", "bus", "taxi", "didi", "ride-hailing", "shared bike", "navigation", "travel", "china"],
-    "creationDate": "2024-06-05" 
+    "creationDate": "2025-03-05" 
   },
   { 
     "title": "The Ultimate Packing Checklist for Your Trip to China",
@@ -61,6 +77,6 @@
     "url": "subpage/blogs/packing_checklist.html", 
     "image": "assets/img/packing_checklist.jpg", 
     "tags": ["packing", "checklist", "travel", "china", "essentials", "documents", "clothing", "toiletries", "electronics", "medication", "tips"],
-    "creationDate": "2024-06-10" 
+    "creationDate": "2025-03-10" 
   }
 ]

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Discover the Great Wall of China's fascinating history and cultural significance. Learn about the best sections to visit, travel tips, and why this UNESCO site is a must-see for travelers." />
+        <meta name="author" content="Wander in China" />
+        <title>Explore the Great Wall of China: History, Culture, and Travel Insights - Wander in China</title>
+        <link rel="icon" type="image/png" href="../../assets/img/favicon.png" sizes="32x32" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <link href="../../css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- 页头占位符 -->
+            <div id="header-placeholder"></div>
+
+            <!-- Blog Post Content Section -->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-9">
+                            <!-- Post Title -->
+                            <h1 class="fw-bolder mb-4">Explore the Great Wall of China: History, Culture, and Travel Insights</h1>
+
+                            <!-- Introductory Paragraph -->
+                            <p class="fs-5 mb-4">The Great Wall of China, a UNESCO World Heritage site, is one of the world's most iconic landmarks. Stretching over 13,000 miles across northern China, the Great Wall is a testament to ancient Chinese engineering and a symbol of national resilience. Visiting the Great Wall offers a unique glimpse into China's rich history and cultural heritage.</p>
+
+                            <!-- Image: Panoramic view of the Great Wall -->
+                            <figure class="my-5 text-center">
+                                <img class="img-fluid rounded w-75" src="../../assets/img/theGreatWall.png" alt="Panoramic view of the Great Wall of China" />
+                                <figcaption class="mt-2 text-center text-muted small">Experience the breathtaking views of the Great Wall.</figcaption>
+                            </figure>
+
+                            <!-- Post Content -->
+                            <article>
+                                <!-- Section: The Historical Importance of the Great Wall -->
+                                <h2 class="fw-bolder mt-5 mb-3">The Historical Importance of the Great Wall</h2>
+                                <p class="fs-5 mb-4">The history of the Great Wall dates back to the 7th century BC. Its most famous sections were constructed during the Ming Dynasty (1368 - 1644 AD) to protect against invasions from northern nomadic tribes. As a marvel of ancient military architecture, the Great Wall includes walls, watchtowers, and fortresses.</p>
+
+                                <!-- Subsection: Architectural Feats and Strategic Value -->
+                                <h3 class="fw-bolder mt-4 mb-3">Architectural Feats and Strategic Value</h3>
+                                <p class="fs-5 mb-4">The Great Wall's construction utilized materials like earth, brick, and stone, showcasing the ingenuity of ancient Chinese builders. Its strategic location along mountain ridges provided a formidable defense line and facilitated communication through signal towers.</p>
+
+                                <!-- Section: Cultural Significance and Tourist Attraction -->
+                                <h2 class="fw-bolder mt-5 mb-3">Cultural Significance and Tourist Attraction</h2>
+                                <p class="fs-5 mb-4">Beyond its historical role, the Great Wall is a cultural emblem of China's unity and perseverance. It has inspired countless paintings, poems, and legends, symbolizing the country's spirit and strength. Today, the Great Wall is a major tourist attraction, drawing millions of visitors worldwide to experience its grandeur and historical depth.</p>
+
+                                <!-- Image: Visitors at Mutianyu section in autumn -->
+                                
+                                <!-- Section: Planning Your Visit: Top Sections Near Beijing -->
+                                <h2 class="fw-bolder mt-5 mb-3">Planning Your Visit: Top Sections Near Beijing</h2>
+                                <p class="fs-5 mb-4">Several sections of the Great Wall are easily accessible from Beijing, each offering unique experiences:</p>
+                                <ul class="list-unstyled mb-4 fs-5">
+                                    <li class="mb-3">
+                                        <strong class="d-block mb-1">Badaling:</strong> The most famous and restored section, ideal for first - time visitors, though often crowded.
+                                    </li>
+                                    <li class="mb-3">
+                                        <strong class="d-block mb-1">Mutianyu:</strong> Known for its scenic beauty and fewer tourists, offering amenities like a cable car and toboggan ride.
+                                    </li>
+                                    <li>
+                                        <strong class="d-block mb-1">Jinshanling and Simatai:</strong> Perfect for hikers and those seeking less crowded, rugged terrain.
+                                    </li>
+                                </ul>
+
+                                <!-- Concluding Paragraph -->
+                                <p class="fs-5 mt-5">Embark on a journey to the Great Wall of China to explore its historical and cultural richness. Whether you're hiking its ancient paths or capturing breathtaking views, the Great Wall promises an unforgettable adventure.</p>
+
+                            </article>
+                        </div>
+
+                        <!-- 将侧边栏样式 (bg-light p-3 rounded) 应用到列容器上 -->
+                        <div class="col-lg-3 bg-light p-3 rounded"> <!-- 添加了 bg-light p-3 rounded -->
+                            <div id="sidebar-placeholder">
+                                <!-- sidebar.html 的内容将加载到这里 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 页脚占位符 -->
+        <div id="footer-placeholder"></div>
+
+        <!-- Bootstrap core JS (CDN link, no change needed) -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS (Correct relative path) -->
+        <script src="../../js/scripts.js"></script>
+        <!-- Components loader (Correct relative path) -->
+        <script src="../../js/components.js"></script>
+        <!-- Added script to load recent posts -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Define the URL of the current article to find its data
+                const currentArticleUrlFilename = 'explore_great_wall.html'; 
+
+                fetch('../../data/blogs.json') 
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(posts => {
+                        // --- Populate Recent Posts (Existing Logic Refactored) ---
+                        const recentPostsList = document.getElementById('recent-posts-list');
+                        if (recentPostsList) {
+                            const sortedPosts = [...posts].sort((a, b) => new Date(b.creationDate) - new Date(a.creationDate));
+                            populatePostList(recentPostsList, sortedPosts.slice(0, 3));
+                        }
+
+                        // --- Populate You May Be Interested In (New Logic) ---
+                        const interestedPostsList = document.getElementById('interested-posts-list');
+                        if (interestedPostsList) {
+                            const currentArticle = posts.find(post => post.url.endsWith(currentArticleUrlFilename)); 
+
+                            if (currentArticle && currentArticle.tags) {
+                                const otherPosts = posts.filter(post => !post.url.endsWith(currentArticleUrlFilename)); 
+                                const similarPosts = calculateSimilarity(currentArticle, otherPosts);
+
+                                // Sort by similarity score (descending) and take top 3
+                                similarPosts.sort((a, b) => b.similarity - a.similarity);
+                                populatePostList(interestedPostsList, similarPosts.slice(0, 3));
+                            } else {
+                                // Handle case where current article or its tags aren't found
+                                interestedPostsList.innerHTML = '<div class="p-3 text-warning small">Could not determine related posts.</div>';
+                                if (!currentArticle) console.warn(`Could not find article data for URL: ${currentArticleUrlFilename}`);
+                                if (currentArticle && !currentArticle.tags) console.warn(`Article "${currentArticle.title}" has no tags for comparison.`);
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error loading posts:', error);
+                        // Display error in both lists if fetch fails
+                        const recentPostsList = document.getElementById('recent-posts-list');
+                        if (recentPostsList) recentPostsList.innerHTML = '<div class="p-3 text-danger small">Failed to load posts.</div>';
+                        const interestedPostsList = document.getElementById('interested-posts-list');
+                        if (interestedPostsList) interestedPostsList.innerHTML = '<div class="p-3 text-danger small">Failed to load posts.</div>';
+                    });
+
+                // Helper function to calculate similarity based on common tags
+                function calculateSimilarity(currentArticle, otherPosts) {
+                    const currentTags = new Set(currentArticle.tags);
+                    return otherPosts.map(post => {
+                        if (!post.tags) return { ...post, similarity: 0 }; // Handle posts without tags
+                        const commonTags = post.tags.filter(tag => currentTags.has(tag));
+                        return { ...post, similarity: commonTags.length }; // Add similarity score
+                    }).filter(post => post.similarity > 0); // Optionally filter out posts with 0 similarity
+                }
+
+                // Helper function to populate a list container (Reused for both lists)
+                function populatePostList(container, postsToDisplay) {
+                    container.innerHTML = ''; // Clear loading/error message
+                    if (!postsToDisplay || postsToDisplay.length === 0) {
+                        container.innerHTML = '<div class="p-3 text-muted small">No relevant posts found.</div>';
+                        return;
+                    }
+                    postsToDisplay.forEach(post => {
+                        const urlParts = post.url.split('/');
+                        const linkHref = urlParts[urlParts.length - 1]; // Use filename for link
+                        // Ensure image path is relative to the current HTML file's location
+                        const imageSrc = `../../${post.image.startsWith('../../') ? post.image.substring(6) : post.image}`;
+
+
+                        const postElement = document.createElement('a');
+                        postElement.href = linkHref;
+                        postElement.className = 'list-group-item list-group-item-action p-3 d-flex align-items-start';
+                        postElement.innerHTML = `
+                            <div style="flex: 1 1 33.33%;" class="me-3"> <!-- Image container -->
+                                <img src="${imageSrc}" alt="${post.title} Thumbnail" class="w-100" style="height: 60px; object-fit: cover;">
+                            </div>
+                            <div style="flex: 2 1 66.67%;"> <!-- Text container -->
+                                <div class="fw-semibold small">${post.title}</div>
+                                <div class="small text-muted">${post.creationDate}</div>
+                            </div>
+                        `;
+                        container.appendChild(postElement);
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
